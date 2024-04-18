@@ -17,6 +17,7 @@ AFRAME.registerComponent('material-menu', {
             if (!menuVisible) return; // Ignore if menu is not visible
             var materialSrc = evt.target.getAttribute('material').src;
             el.setAttribute('material', 'src', materialSrc);
+            el.setAttribute('color', 'white')
         };
 
         el.addEventListener('click', this.toggleMenu);
