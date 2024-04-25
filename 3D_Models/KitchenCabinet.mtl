@@ -1,0 +1,1732 @@
+# Blender MTL File: 'untitled.blend'
+# Material Count: 157
+
+newmtl Arrowhead_Plant_sjsmD
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Bump D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\sjmn\\sjmnenp_2K_Normal.jpg
+map_Kd D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\sjmn\\sjmnenp_2K_Albedo.jpg
+map_Ns D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\sjmn\\sjmnenp_2K_Roughness.jpg
+
+newmtl Bathroom_sinks
+Ns 900.000000
+Ka 0.071429 0.071429 0.071429
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+
+newmtl Bed_lamp_emmit
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl Blanket
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump -bm 0.500000 D:\\Projects\\NakedEye_Appartment\\Blanket\\DefaultMaterial_Normal_OpenGL.png
+map_Kd D:\\Projects\\NakedEye_Appartment\\Blanket\\DefaultMaterial_Base_Color.png
+map_Ns D:\\Projects\\NakedEye_Appartment\\Blanket\\DefaultMaterial_Roughness.png
+refl D:\\Projects\\NakedEye_Appartment\\Blanket\\DefaultMaterial_Metallic.png
+
+newmtl Carpet_tex
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\Carpet\\rug_contemporary_3_20170321_1741858608_NRM.png
+map_Kd D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\Carpet\\rug_contemporary_3_20170321_1741858608_COLOR.png
+map_Ks D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\Carpet\\rug_contemporary_3_20170321_1741858608_SPEC.png
+
+newmtl Celling_light
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl DOOR
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.702784 0.702784 0.702784
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl DOOR.001
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.702784 0.702784 0.702784
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd D:\\WebVR\\ApartmentCustom\\Assets\\Materials\\Original Door\\pexels-fwstudio-172276.jpg
+
+newmtl Floor
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\wood_plank_wdipfjw\\wdipfjw_2K_Normal.jpg
+map_Kd D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\wood_plank_wdipfjw\\wdipfjw_2K_Albedo.jpg
+map_Ns D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\wood_plank_wdipfjw\\wdipfjw_2K_Roughness.jpg
+
+newmtl Kitchen_cab_marbel_black
+Ns 752.326539
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\360_F_242515962_zNuvFtjz5Dkt7rvhmfAVeoGVvht3wNRm.jpg
+
+newmtl Kitechen_washer_metal
+Ns 459.183695
+Ka 0.692857 0.692857 0.692857
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+
+newmtl Material.001
+Ns 596.755118
+Ka 0.764286 0.764286 0.764286
+Kd 0.014536 0.014536 0.014536
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+
+newmtl Material.002
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.011361 0.017759 0.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl Material.003
+Ns 188.081610
+Ka 1.000000 1.000000 1.000000
+Kd 0.013064 0.013064 0.013064
+Ks 0.400000 0.400000 0.400000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl Material.005
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl Material.006
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.584986 0.584986 0.584986
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump D:\\Projects\\NakedEye_Appartment\\Default Plane\\Fabric Suit\\DefaultMaterial_Normal.png
+
+newmtl Material.007
+Ns 683.449015
+Ka 0.150000 0.150000 0.150000
+Kd 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+
+newmtl Material.008
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump D:\\Projects\\NakedEye_Appartment\\Bedroom Carpet\\Seamless-Carpet-Dark-Texture_NRM.png
+map_Kd D:\\Projects\\NakedEye_Appartment\\Bedroom Carpet\\Seamless-Carpet-Dark-Texture_COLOR.png
+map_Ks D:\\Projects\\NakedEye_Appartment\\Bedroom Carpet\\Seamless-Carpet-Dark-Texture_SPEC.png
+
+newmtl Material.009
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.014536 0.014536 0.014536
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl Material.010
+Ns 2.905476
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Kd D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\Book_Cover\\Heaven-and-Hell-Premade-Action-Adventure-Western-Sheriff-Outlaw-Bandit-Gallows-Cowboy-Gunslinger-Gun-eBook-Book-Cover-Full.jpg
+
+newmtl Material.011
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\Book_Cover\\360_F_204534725_dON3Kg3myDwGUg7yGdNNe1UGFstNlTbE.jpg
+
+newmtl Material.013
+Ns 2.905476
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Kd D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\Book_Cover\\full-08.jpg
+
+newmtl Material.014
+Ns 525.719776
+Ka 1.000000 1.000000 1.000000
+Kd 0.354577 0.354577 0.354577
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+
+newmtl Material.015
+Ns 2.905476
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Kd D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\Book_Cover\\adventureinward_fullcoverwith-badge.jpg
+
+newmtl Material.016
+Ns 2.905476
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Kd D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\Book_Cover\\Heaven-and-Hell-Premade-Action-Adventure-Western-Sheriff-Outlaw-Bandit-Gallows-Cowboy-Gunslinger-Gun-eBook-Book-Cover-Full.jpg
+
+newmtl Material.017
+Ns 2.905476
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Kd D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\Book_Cover\\download (1).jpg
+
+newmtl Material.018
+Ns 2.905476
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Kd D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\Book_Cover\\615407_11900432_2260460_1b67d08f_image.jpg
+
+newmtl Material.019
+Ns 2.905476
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Kd D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\Book_Cover\\bc9ca4792c5662440d0279a178d1b7fa.jpg
+
+newmtl Material.020
+Ns 2.905476
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Kd D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\Book_Cover\\full-08.jpg
+
+newmtl Material.021
+Ns 2.905476
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Kd D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\Book_Cover\\img.jpg
+
+newmtl Material.022
+Ns 2.905476
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Kd D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\Book_Cover\\wp0603bd78_05_06.jpg
+
+newmtl Material.023
+Ns 159.841829
+Ka 1.000000 1.000000 1.000000
+Kd 0.089367 0.089367 0.089367
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl Material.024
+Ns 2.905476
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Kd D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\Book_Cover\\download.jpg
+
+newmtl Material.025
+Ns 2.905476
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Kd D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\Book_Cover\\54e97c97158b27cfb8f4f94a40b6a91c--book-cover-art-book-covers.jpg
+
+newmtl Material.026
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl Material.028
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl Material.029
+Ns 2.905476
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Kd D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\Book_Cover\\54e97c97158b27cfb8f4f94a40b6a91c--book-cover-art-book-covers.jpg
+
+newmtl Material.030
+Ns 29.752068
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl Material.031
+Ns 2.905476
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Kd D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\Book_Cover\\9e69439y88nncms4gvfgdwzz2k_image.jpg
+
+newmtl Material.032
+Ns 188.081610
+Ka 1.000000 1.000000 1.000000
+Kd 0.013064 0.013064 0.013064
+Ks 0.400000 0.400000 0.400000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl Material.035
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd images (2).jpg
+
+newmtl Material.037
+Ns 2.905476
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Kd D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\Book_Cover\\9e69439y88nncms4gvfgdwzz2k_image.jpg
+
+newmtl Material.038
+Ns 2.905476
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Kd D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\Book_Cover\\download.jpg
+
+newmtl Material.039
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl Material.040
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl Material.041
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.014536 0.014536 0.014536
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl Material.042
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump D:\\Projects\\NakedEye_Appartment\\Default Plane\\Fabric Suit\\DefaultMaterial_Normal.png
+
+newmtl Material.043
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl Material.044
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl Material.045
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.255682 0.255682 0.255682
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd D:\\Projects\\NakedEye_Appartment\\depositphotos_392758110-stock-photo-abstract-pattern-gray-crumpled-bed.jpg
+
+newmtl Material.046
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd Telegram Desktop\\2.jpg
+
+newmtl Material.047
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.685457 0.685457 0.685457
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl Material.048
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.072505 0.075231 0.080859
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl Material.049
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.483519 0.483519 0.483519
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl Material.050
+Ns 10.488769
+Ka 0.085227 0.085227 0.085227
+Kd 0.152926 0.158961 0.171441
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Bump -s 3.000000 3.000000 3.000000 D:\\Projects\\NakedEye_Appartment\\Default Plane\\Fabric Suit\\DefaultMaterial_Normal.png
+
+newmtl Material.051
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump D:\\Projects\\NakedEye_Appartment\\Master bedroom carpet tex\\istockphoto-636437142-1024x1024_NRM.png
+map_Kd D:\\Projects\\NakedEye_Appartment\\Master bedroom carpet tex\\istockphoto-636437142-1024x1024_COLOR.png
+map_Ks D:\\Projects\\NakedEye_Appartment\\Master bedroom carpet tex\\istockphoto-636437142-1024x1024_SPEC.png
+
+newmtl Material.052
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 3.329293 1.938255 0.658323
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl Material.053
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.232702 0.232702 0.232702
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl Material.054
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump -bm 0.800000 D:\\Projects\\NakedEye_Appartment\\Towl Batroom\\istockphoto-135836829-612x612_NRM.png
+map_Kd D:\\Projects\\NakedEye_Appartment\\Towl Batroom\\istockphoto-135836829-612x612_COLOR.png
+map_Ks D:\\Projects\\NakedEye_Appartment\\Towl Batroom\\istockphoto-135836829-612x612_SPEC.png
+
+newmtl Material.055
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump D:\\Projects\\NakedEye_Appartment\\Towl\\clean-white-towel-texture-seamless-background-close-up-clean-white-towel-texture-seamless-background-224218883_NRM.png
+map_Kd D:\\Projects\\NakedEye_Appartment\\Towl\\clean-white-towel-texture-seamless-background-close-up-clean-white-towel-texture-seamless-background-224218883_COLOR.png
+map_Ks D:\\Projects\\NakedEye_Appartment\\Towl\\clean-white-towel-texture-seamless-background-close-up-clean-white-towel-texture-seamless-background-224218883_SPEC.png
+
+newmtl Material.056
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.092250 0.095779 0.103071
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl Material.057
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.315106 0.327962 0.354577
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl Material.058
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl Material.059
+Ns 2.905476
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Kd 54e97c97158b27cfb8f4f94a40b6a91c--book-cover-art-book-covers.jpg
+
+newmtl Material.060
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd 360_F_204534725_dON3Kg3myDwGUg7yGdNNe1UGFstNlTbE.jpg
+
+newmtl Material.061
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump D:\\Projects\\NakedEye_Appartment\\Pink towl\\Download-3-Closeup-Deep-Pink-Towel-Texture-Backgrounds_NRM.png
+map_Kd D:\\Projects\\NakedEye_Appartment\\Pink towl\\Download-3-Closeup-Deep-Pink-Towel-Texture-Backgrounds_COLOR.png
+map_Ks D:\\Projects\\NakedEye_Appartment\\Pink towl\\Download-3-Closeup-Deep-Pink-Towel-Texture-Backgrounds_SPEC.png
+
+newmtl Material.062
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl Material.063
+Ns 2.905476
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Kd UndertakersHarlots-Full-Web.jpg
+
+newmtl Material.064
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd 360_F_204534725_dON3Kg3myDwGUg7yGdNNe1UGFstNlTbE.jpg
+
+newmtl Material.065
+Ns 2.905476
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Kd download.jpg
+
+newmtl Material.066
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl Material.067
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl Material.068
+Ns 900.000000
+Ka 0.438746 0.438746 0.438746
+Kd 0.800000 0.408859 0.073148
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+
+newmtl Material.069
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl Material.070
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd 360_F_242515962_zNuvFtjz5Dkt7rvhmfAVeoGVvht3wNRm.jpg
+
+newmtl Material.071
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.650180 0.650180 0.650180
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl Material.072
+Ns 671.281009
+Ka 0.693182 0.693182 0.693182
+Kd 0.210403 0.210403 0.210403
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+
+newmtl Material.073
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.032127 0.032127 0.032127
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl Material.074
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl Material.075
+Ns 889.801792
+Ka 0.267045 0.267045 0.267045
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd istockphoto-859510510-170667a.jpg
+
+newmtl Material.076
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.281287 0.281287 0.281287
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl Material.077
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump D:\\Projects\\NakedEye_Appartment\\shower tiles\\New folder\\istockphoto-1145811502-612x612_NRM.png
+map_Kd D:\\Projects\\NakedEye_Appartment\\shower tiles\\New folder\\istockphoto-1145811502-612x612_COLOR.png
+map_Ks D:\\Projects\\NakedEye_Appartment\\shower tiles\\New folder\\istockphoto-1145811502-612x612_SPEC.png
+
+newmtl Material.078
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd stone-tile-effect-wall-panels_900x.jpg
+
+newmtl Material.079
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.007395 0.007395 0.007395
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl Material.080
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl Material.081
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump D:\\Projects\\NakedEye_Appartment\\Bathroom rug\\download (2)_NRM.png
+map_Kd D:\\Projects\\NakedEye_Appartment\\Bathroom rug\\download (2)_COLOR.png
+map_Ks D:\\Projects\\NakedEye_Appartment\\Bathroom rug\\download (2)_SPEC.png
+
+newmtl Material.088
+Ns 900.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\Book_Cover\\balance-no-1-limited-edition-art-print-999940_1024x1024@2x.jpg
+
+newmtl Material.089
+Ns 2.905476
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Kd D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\Book_Cover\\img.jpg
+
+newmtl Material.091
+Ns 2.905476
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Kd D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\Book_Cover\\9e69439y88nncms4gvfgdwzz2k_image.jpg
+
+newmtl Material.093
+Ns 2.905476
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Kd D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\Book_Cover\\360_F_388273984_QqNH4bZAOxLTZ9u6J4GEWHzZB92zZ1sp.jpg
+
+newmtl Material.094
+Ns 2.905476
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Kd D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\Book_Cover\\adventureinward_fullcoverwith-badge.jpg
+
+newmtl Material.095
+Ns 900.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\Book_Cover\\SFD126.jpg
+
+newmtl Material.096
+Ns 2.905476
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Kd D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\Book_Cover\\full-cover.jpg
+
+newmtl Material.097
+Ns 2.905476
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Kd D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\Book_Cover\\Heaven-and-Hell-Premade-Action-Adventure-Western-Sheriff-Outlaw-Bandit-Gallows-Cowboy-Gunslinger-Gun-eBook-Book-Cover-Full.jpg
+
+newmtl Material.098
+Ns 2.905476
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Kd D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\Book_Cover\\full-08.jpg
+
+newmtl Material.099
+Ns 2.905476
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Kd D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\Book_Cover\\download.jpg
+
+newmtl Material.100
+Ns 2.905476
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Kd D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\Book_Cover\\Heaven-and-Hell-Premade-Action-Adventure-Western-Sheriff-Outlaw-Bandit-Gallows-Cowboy-Gunslinger-Gun-eBook-Book-Cover-Full.jpg
+
+newmtl Material.101
+Ns 2.905476
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Kd D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\Book_Cover\\Heaven-and-Hell-Premade-Action-Adventure-Western-Sheriff-Outlaw-Bandit-Gallows-Cowboy-Gunslinger-Gun-eBook-Book-Cover-Full.jpg
+
+newmtl Material.102
+Ns 2.905476
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Kd D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\Book_Cover\\full-08.jpg
+
+newmtl Material.104
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\Book_Cover\\abstract-contemporary-modern-watercolor-art_93314-3174.jpg
+
+newmtl Material.106
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.123141 0.123141 0.123141
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl Material.107
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl Material.108
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.001674 0.025083 0.112846
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl Material.109
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\wood_veneer_tfjbderc 1\\tfjbderc_2K_Normal.jpg
+map_Kd D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\wood_veneer_tfjbderc 1\\tfjbderc_2K_Albedo.jpg
+map_Ns D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\wood_veneer_tfjbderc 1\\tfjbderc_2K_Roughness.jpg
+
+newmtl Material.110
+Ns 900.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\Book_Cover\\at-the-beach-no-9-limited-edition-art-print-667153_large.jpg
+
+newmtl Material.113
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl Material.114
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump C:\\Users\\Vision\\Documents\\Downloaded\\atlas\\debris_nature_thdjv1h\\thdjv1h_2K_Normal.jpg
+map_Kd C:\\Users\\Vision\\Documents\\Downloaded\\atlas\\debris_nature_thdjv1h\\thdjv1h_2K_Albedo.jpg
+map_Ns C:\\Users\\Vision\\Documents\\Downloaded\\atlas\\debris_nature_thdjv1h\\thdjv1h_2K_Roughness.jpg
+
+newmtl Material.115
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump C:\\Users\\Vision\\Documents\\Downloaded\\atlas\\Debris_Nature_tgsoxnh\\tgsoxnh_2K_Normal.jpg
+map_Kd C:\\Users\\Vision\\Documents\\Downloaded\\atlas\\Debris_Nature_tgsoxnh\\tgsoxnh_2K_Albedo.jpg
+map_Ns C:\\Users\\Vision\\Documents\\Downloaded\\atlas\\Debris_Nature_tgsoxnh\\tgsoxnh_2K_Roughness.jpg
+
+newmtl Material.116
+Ns 28.698991
+Ka 1.000000 1.000000 1.000000
+Kd 0.031647 0.051659 0.005897
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl Material.117
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump C:\\Users\\Vision\\Documents\\Downloaded\\surface\\wood_other_ukplbazn\\ukplbazn_2K_Normal.jpg
+map_Kd C:\\Users\\Vision\\Documents\\Downloaded\\surface\\wood_other_ukplbazn\\ukplbazn_2K_Albedo.jpg
+map_Ns C:\\Users\\Vision\\Documents\\Downloaded\\surface\\wood_other_ukplbazn\\ukplbazn_2K_Roughness.jpg
+
+newmtl Material.119
+Ns 900.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd D:\\WebVR\\ApartmentCustom\\Assets\\photo_2024-02-20_18-34-42.jpg
+
+newmtl Material.120
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.013063 0.013063 0.013063
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl Material.121
+Ns 900.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd Shop-Abstract-I-Art-Print-a-painted-abstract-themed-wall-art-print-from-The-Print-Emporium-wall-artwork-collection-Buy-Australian-made-fine-art-painting-style-poster-and-framed-prints_7669dd54-053a-4a01-bbaf-a773.webp
+
+newmtl Material.122
+Ns 900.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd cyra901820-prints.webp
+
+newmtl Megar
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\fabric_plain_sbklx0p0\\sbklx0p_2K_Normal.jpg
+map_Kd D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\fabric_plain_sbklx0p0\\sbklx0p_2K_Albedo.jpg
+map_Ns D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\fabric_plain_sbklx0p0\\sbklx0p_2K_Roughness.jpg
+
+newmtl Megar_2
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\fabric_plain_sbklx0p0\\sbklx0p_2K_Albedo.jpg
+map_Ns D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\fabric_plain_sbklx0p0\\sbklx0p_2K_Roughness.jpg
+
+newmtl Mini_bed_wood_tex
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl Mirror
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl Mirror.001
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 0.316239
+illum 9
+
+newmtl None
+Ns 500
+Ka 0.8 0.8 0.8
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+
+newmtl OVEN
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl OVEN.001
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl OVEN.003
+Ns 664.493809
+Ka 0.621083 0.621083 0.621083
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+
+newmtl Pages
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\Book_Cover\\360_F_204534725_dON3Kg3myDwGUg7yGdNNe1UGFstNlTbE.jpg
+
+newmtl Pillow
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump -bm 0.500000 D:\\Projects\\NakedEye_Appartment\\Pillow 2k\\DefaultMaterial_Normal_OpenGL.png
+map_Kd D:\\Projects\\NakedEye_Appartment\\Pillow 2k\\DefaultMaterial_Base_Color.png
+map_Ns D:\\Projects\\NakedEye_Appartment\\Pillow 2k\\DefaultMaterial_Roughness.png
+refl D:\\Projects\\NakedEye_Appartment\\Pillow 2k\\DefaultMaterial_Metallic.png
+
+newmtl Sofa_with_out_sponge
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\Full_sofa with out sponge_2k Tex\\DefaultMaterial_Normal.png
+map_Kd D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\Full_sofa with out sponge_2k Tex\\DefaultMaterial_Base_Color.png
+map_Ns D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\Full_sofa with out sponge_2k Tex\\DefaultMaterial_Roughness.png
+refl D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\Full_sofa with out sponge_2k Tex\\DefaultMaterial_Metallic.png
+
+newmtl Stove_black_
+Ns 44.127552
+Ka 1.000000 1.000000 1.000000
+Kd 0.103071 0.103071 0.103071
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl TV_frame_black
+Ns 47.020403
+Ka 1.000000 1.000000 1.000000
+Kd 0.006079 0.006079 0.006079
+Ks 0.164286 0.164286 0.164286
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl TV_screen_black
+Ns 639.367361
+Ka 0.057143 0.057143 0.057143
+Kd 0.001827 0.001827 0.001827
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+
+newmtl White_wall
+Ns 14.877542
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl bathroom_wall
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump D:\\Projects\\NakedEye_Appartment\\Bathroom wall\\mosaic-tiles-texture-background-vector-9752745_NRM.png
+map_Kd D:\\Projects\\NakedEye_Appartment\\Bathroom wall\\mosaic-tiles-texture-background-vector-9752745_COLOR.png
+map_Ks D:\\Projects\\NakedEye_Appartment\\Bathroom wall\\mosaic-tiles-texture-background-vector-9752745_SPEC.png
+
+newmtl dinning_chair_back
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\Dining chair 1\\Back\\sofa_sponge_upper.001_Base_Color.png
+
+newmtl dinning_chair_bottom
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\Dining chair\\Bottom\\DefaultMaterial_Normal.png
+map_Kd D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\Dining chair\\Bottom\\DefaultMaterial_Base_Color.png
+map_Ns D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\Dining chair\\Bottom\\DefaultMaterial_Roughness.png
+
+newmtl door_handle
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.003046 0.003046 0.003046
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl kitchen_cab_black_hold
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.025364 0.025364 0.025364
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl kitchen_cab_light
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl kitchen_cab_light_metal
+Ns 743.801648
+Ka 0.568182 0.568182 0.568182
+Kd 0.265943 0.265943 0.265943
+Ks 0.005682 0.005682 0.005682
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+
+newmtl kitchen_cabinwt_white_
+Ns 423.183660
+Ka 0.521429 0.521429 0.521429
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Ns C:\\Users\\Vision\\Documents\\Downloaded\\surface\\wood_board_vdcjecc\\vdcjecc_2K_Roughness.jpg
+
+newmtl lambert1.001
+Ns 179.999996
+Ka 1.000000 1.000000 1.000000
+Kd 0.756863 0.756863 0.756863
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\wfz\\wfzobb2ia_2K_Albedo.jpg
+map_Ns D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\wfz\\wfzobb2ia_2K_Roughness.jpg
+
+newmtl lambert1.002
+Ns 179.999996
+Ka 1.000000 1.000000 1.000000
+Kd 0.756863 0.756863 0.756863
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\wfp\\wfypeifha_2K_Normal.jpg
+map_Kd D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\wfp\\wfypeifha_2K_Albedo.jpg
+map_Ns D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\wfp\\wfypeifha_2K_Roughness.jpg
+
+newmtl lambert1.006
+Ns 179.999996
+Ka 1.000000 1.000000 1.000000
+Kd 0.756863 0.756863 0.756863
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\vgzta\\vgztealha_2K_Normal.jpg
+map_Kd D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\vgzta\\vgztealha_2K_Albedo.jpg
+map_Ns D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\vgzta\\vgztealha_2K_Roughness.jpg
+
+newmtl lambert1.007
+Ns 179.999996
+Ka 1.000000 1.000000 1.000000
+Kd 0.756863 0.756863 0.756863
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\vgzta\\vgztealha_2K_Normal.jpg
+map_Kd D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\vgzta\\vgztealha_2K_Albedo.jpg
+map_Ns D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\vgzta\\vgztealha_2K_Roughness.jpg
+
+newmtl lambert1.008
+Ns 179.999996
+Ka 1.000000 1.000000 1.000000
+Kd 0.500000 0.500000 0.500000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\sjmn\\sjmnenp_2K_Normal.jpg
+map_Kd D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\sjmn\\sjmnenp_2K_Albedo.jpg
+
+newmtl lambert1.009
+Ns 179.999996
+Ka 1.000000 1.000000 1.000000
+Kd 0.756863 0.756863 0.756863
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\wfp\\wfypeifha_2K_Normal.jpg
+map_Kd D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\wfp\\wfypeifha_2K_Albedo.jpg
+map_Ns D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\wfp\\wfypeifha_2K_Roughness.jpg
+
+newmtl lambert1.010
+Ns 179.999996
+Ka 1.000000 1.000000 1.000000
+Kd 0.500000 0.500000 0.500000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\sicn\\sicnazp_2K_Normal.jpg
+map_Kd D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\sicn\\sicnazp_2K_Albedo.jpg
+map_Ns D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\sicn\\sicnazp_2K_Roughness.jpg
+
+newmtl light_metal_
+Ns 683.448992
+Ka 0.300000 0.300000 0.300000
+Kd 0.281286 0.281286 0.281286
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+
+newmtl living_room_Tv_cabinet_wood
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\wood_board_vdcjecc\\vdcjecc_2K_Normal.jpg
+map_Kd D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\wood_board_vdcjecc\\vdcjecc_2K_Albedo.jpg
+map_Ns D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\wood_board_vdcjecc\\vdcjecc_2K_Roughness.jpg
+
+newmtl mini_sofa
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump D:\\Projects\\NakedEye_Appartment\\Mini sofa tex 2k\\sofa_sponge_upper.001_Normal_OpenGL.png
+map_Kd D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\Mini sofa tex 2k\\sofa_sponge_upper.001_Base_Color.png
+map_Ns D:\\Projects\\NakedEye_Appartment\\Mini sofa tex 2k\\sofa_sponge_upper.001_Roughness.png
+refl D:\\Projects\\NakedEye_Appartment\\Mini sofa tex 2k\\sofa_sponge_upper.001_Metallic.png
+
+newmtl mini_table_wood
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\wood_board_vdcjecc\\vdcjecc_2K_Normal.jpg
+map_Kd D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\wood_board_vdcjecc\\vdcjecc_2K_Albedo.jpg
+
+newmtl shower_marble_floor
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump C:\\Users\\Vision\\Documents\\Downloaded\\surface\\floors_marble_tfxkehvg\\tfxkehvg_2K_Normal.jpg
+map_Kd C:\\Users\\Vision\\Documents\\Downloaded\\surface\\floors_marble_tfxkehvg\\tfxkehvg_2K_Albedo.jpg
+map_Ns C:\\Users\\Vision\\Documents\\Downloaded\\surface\\floors_marble_tfxkehvg\\tfxkehvg_2K_Roughness.jpg
+
+newmtl small_table_white
+Ns 0.000000
+Ka 0.135714 0.135714 0.135714
+Kd 0.800000 0.800000 0.800000
+Ks 0.035714 0.035714 0.035714
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Bump D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\wood_board_vdcjecc\\vdcjecc_2K_Normal.jpg
+map_Kd D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\wood_board_vdcjecc\\vdcjecc_2K_Albedo.jpg
+map_Ns D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\wood_board_vdcjecc\\vdcjecc_2K_Roughness.jpg
+
+newmtl sofa_lower
+Ns 0.220981
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\Sofa_Lower_sponge_Tex 2k\\DefaultMaterial_Normal.png
+map_Kd D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\Sofa_Lower_sponge_Tex 2k\\DefaultMaterial_Base_Color.png
+refl D:\\Projects\\NakedEye_Appartment\\Sofa_Lower_sponge_Tex 2k\\DefaultMaterial_Metallic.png
+
+newmtl sofa_sponge_upper
+Ns 31.821166
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\Sofa sponge upper\\DefaultMaterial_Normal.png
+map_Kd D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\Sofa sponge upper\\DefaultMaterial_Base_Color.png
+refl D:\\Projects\\NakedEye_Appartment\\Sofa sponge upper\\DefaultMaterial_Metallic.png
+
+newmtl soil
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\ground_forest_whvbbac\\whvbbac_2K_Normal.jpg
+map_Kd D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\ground_forest_whvbbac\\whvbbac_2K_Albedo.jpg
+map_Ns D:\\WebVR\\ApartmentCustom\\Assets\\Tex\\ground_forest_whvbbac\\whvbbac_2K_Roughness.jpg
+
+newmtl stove_metal
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl stove_plate
+Ns 515.938755
+Ka 0.314286 0.314286 0.314286
+Kd 0.800000 0.708226 0.592859
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+
+newmtl window_frame_metal
+Ns 740.617356
+Ka 0.300000 0.300000 0.300000
+Kd 0.256324 0.256324 0.256324
+Ks 0.321429 0.321429 0.321429
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
