@@ -10,7 +10,7 @@ AFRAME.registerComponent('menu-switch', {
         var wallMenu = document.getElementById('WallMenu');
         var floorMenu = document.getElementById('FloorMenu');
         var couchMenu = document.getElementById('CouchMenu'); 
-
+        
         // Add click event listener to this element
         el.addEventListener('click', function () {
             // Toggle the living menu's visibility off

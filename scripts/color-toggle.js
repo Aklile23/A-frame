@@ -4,8 +4,9 @@ AFRAME.registerComponent('color-toggle', {
       // Do something when component first attached.
       let el=this.el;
       this.toggleColor = function(){
-        el.setAttribute('color', 'red');
-        // alert('clicked');
+        el.setAttribute('material', 'src: ../textures/Plywood_b.jpg');
+        el.setAttribute('color', '#C0B79F');
+         alert('clicked');
       }
       this.el.addEventListener('click', this.toggleColor);
     },
