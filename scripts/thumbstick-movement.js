@@ -1,56 +1,22 @@
-<<<<<<< HEAD
 AFRAME.registerComponent('thumbstick-movement', {
-    schema: {
-      speed: {type: 'number', default: 5}  // Speed of movement
-    },
-  
-    init: function () {
-      this.vector = new THREE.Vector3();  // Create a vector for movement
-    },
-  
-    tick: function (time, timeDelta) {
-      var el = this.el;
+  schema: {
+      speed: {type: 'number', default: 1}
+  },
+  init: function() {
+      this.vector = new THREE.Vector3();
+  },
+  tick: function(time, timeDelta) {
       var data = this.data;
-      var vector = this.vector;
-  
-      // Get current input from the thumbstick
-      el.addEventListener('thumbstickmoved', (evt) => {
-        vector.x = evt.detail.x * data.speed * timeDelta / 1000;  // Movement on the x-axis
-        vector.z = evt.detail.y * data.speed * timeDelta / 1000;  // Movement on the z-axis
-        vector.y = 0;  // Typically no vertical movement for basic navigation
-  
-        // Apply movement vector based on the camera's heading
-        el.object3D.localToWorld(vector);  // Adjust vector to align with the direction the camera is facing
-        el.object3D.position.add(vector);  // Update position
-      });
-    }
-  });
-=======
-AFRAME.registerComponent('thumbstick-movement', {
-    schema: {
-      speed: {type: 'number', default: 5}  // Speed of movement
-    },
-  
-    init: function () {
-      this.vector = new THREE.Vector3();  // Create a vector for movement
-    },
-  
-    tick: function (time, timeDelta) {
       var el = this.el;
-      var data = this.data;
-      var vector = this.vector;
-  
-      // Get current input from the thumbstick
-      el.addEventListener('thumbstickmoved', (evt) => {
-        vector.x = evt.detail.x * data.speed * timeDelta / 1000;  // Movement on the x-axis
-        vector.z = evt.detail.y * data.speed * timeDelta / 1000;  // Movement on the z-axis
-        vector.y = 0;  // Typically no vertical movement for basic navigation
-  
-        // Apply movement vector based on the camera's heading
-        el.object3D.localToWorld(vector);  // Adjust vector to align with the direction the camera is facing
-        el.object3D.position.add(vector);  // Update position
-      });
-    }
-  });
->>>>>>> c247387c75121255aecdb36308df23c4e8a1d7d2
-  
+      var movementVector = this.vector;
+
+      // Get thumbstick input from the controller
+      var inputX = this.el.components['oculus-touch-controls'].data.thumbstickAxis.x;
+      var inputY = this.el.components['oculus-touch-controls'].data.thumbstickAxis.y;
+
+      // Apply movement
+      movementVector.x = inputX * data.speed * timeDelta / 1000;
+      movementVector.z = inputY * data.speed * timeDelta / 1000;
+      el.object3D.position.add(movementVector);
+  }
+});

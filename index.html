@@ -15,10 +15,13 @@
     <script src="./scripts/oculus-trigger-listener.js"></script>
     <script src="./scripts/thumbstick-movement.js"></script>
     <script src="./scripts/menu-toggle.js"></script>
+    <script src="https://unpkg.com/aframe-extras/dist/aframe-extras.min.js"></script>
+
+
     
 </head>
 <body>
-    <a-scene cursor = 'rayOrigin: mouse' menu-toggle>
+    <a-scene cursor = 'rayOrigin: mouse' physics="gravity: 0" menu-toggle>
         <a-assets>
                 <!--glb models/ not interactable-->
             <a-asset-item id="sofa" src="./3D_Models/Sofa.glb"></a-asset-item>
@@ -44,7 +47,7 @@
             
 
                 <!--obj models/ interactable-->
-            <a-asset-item id="walls" src="./3D_Models/walls.obj"></a-asset-item>
+            <a-asset-item id="walls" src="./3D_Models/walls.obj" static-body></a-asset-item>
             <a-asset-item id="Floor" src="./3D_Models/floor.obj"></a-asset-item>
             <a-asset-item id="kitchenKabinet" src="./3D_Models/Kitchen.obj"></a-asset-item>
             <a-asset-item id="sofa2" src="./3D_Models/Sofa2.glb"></a-asset-item>
@@ -55,12 +58,12 @@
             
         </a-assets>
         <a-sky src="./textures/sky.jpg"></a-sky>
-        <a-entity id="rig" position="0.6 0 0" rotation=" 0 -180 0" thumbstick-movement="speed: 5">
+        <a-entity id="rig" position="0.6 0 0" rotation=" 0 -180 0" kinematic-body="mass: 5; shape: box;">
             <a-entity camera position="1 1.3 1" look-controls wasd-controls >
                 <!-- <a-cursor id="cursor" raycaster fuse="true" fusetimeout="3000" color="white"></a-cursor> -->
             </a-entity>
-            <a-entity oculus-touch-controls="hand: left" laser-controls="hand: left" raycaster="objects: .clickable" ></a-entity>
-            <a-entity oculus-touch-controls="hand: right" laser-controls="hand: right" raycaster="objects: .clickable" ></a-entity>
+            <a-entity oculus-touch-controls="hand: left" laser-controls="hand: left" raycaster="objects: .clickable" thumb-controls="hand: left" ></a-entity>
+            <a-entity oculus-touch-controls="hand: right" laser-controls="hand: right" raycaster="objects: .clickable" thumb-controls="hand: right"></a-entity>
 
         </a-entity>
         
@@ -292,11 +295,7 @@
         </a-entity>
 
             <!--Kitchen cabinet menu-->
-<<<<<<< HEAD
         <a-entity id="CabinetMenu" position="0 0.3 0.01" rotation="0 0 0" visible="false" class="menu">
-=======
-        <a-entity id="CabinetMenu" position="0 0.3 0.01" rotation="0 0 0" visible="false" class="menu"> 
->>>>>>> c247387c75121255aecdb36308df23c4e8a1d7d2
             <a-plane id="background" material="src:./textures/MenuFrame.png; opacity: 0.85" position="0 0.15 0" scale="2 1 1" >
                 <a-plane material="opacity: 0.6" color="#cccccc" position="0 0 0" scale="1 1 1" ></a-plane>
             </a-plane>
@@ -373,6 +372,19 @@
                 <a-text value="SPOT LIGHT" align="center" color="#fff" scale="0.5 0.5"></a-text>
             </a-plane>
         </a-entity>
+
+            <!--Boundaries-->
+        <!-- <a-entity id="boundary">
+            <a-box material="alphaTest: 1; side: double; transparent: true; blending: multiply; color: #ffffff" geometry="" position="-0.93615 1.4762 3.23559" scale="10.51102 4.16059 0.07776" static-body></a-box>
+            <a-box material="alphaTest: 1; side: double; transparent: true; blending: multiply; color: #ffffff" geometry="" position="4.63362 1.4762 2.21601" scale="6.00254 4.16059 1.29074" rotation="0 90 0" static-body></a-box>
+            <a-box material="alphaTest: 1; side: double; transparent: true; blending: multiply; color: #ffffff" geometry="" position="5.41853 1.4762 -0.98175" scale="6.00254 4.16059 1.8247" rotation="0 90 0" static-body ></a-box>
+            <a-box material="alphaTest: 1; side: double; transparent: true; blending: multiply; color: #ffffff" geometry="" position="8.19497 1.476 -1.21285" scale="2.94983 4.16059 3.90289" rotation="0 90 0" static-body></a-box>
+            <a-box material="alphaTest: 1; side: double; transparent: true; blending: multiply; color: #ffffff" geometry="" position="11.72324 1.476 -5.4514" scale="6.1563 4.16059 3.90289" rotation="0 90 0" static-body></a-box>
+            <a-box material="alphaTest: 1; side: double; transparent: true; blending: multiply; color: #ffffff" geometry="" position="5.39618 1.476 -8.47803" scale="0.90893 4.16059 10.06064" rotation="0 90 0" static-body></a-box>
+            <a-box material="alphaTest: 1; side: double; transparent: true; blending: multiply; color: #ffffff" geometry="" position="-0.65166 1.476 -5.89607" scale="6.61001 4.16059 2.62242" rotation="0 90 0" static-body></a-box>
+            <a-box material="alphaTest: 1; side: double; transparent: true; blending: multiply; color: #ffffff" geometry="" position="-4.2988 1.56285 -5.65069" scale="1.39348 4.16059 5.27787" rotation="0 90 0" static-body></a-box>
+            <a-box material="alphaTest: 1; side: double; transparent: true; blending: multiply; color: #ffffff" geometry="" position="-6.94987 1.56285 -0.70115" scale="10.01276 4.16059 1.98454" rotation="0 90 0" static-body></a-box>
+        </a-entity> -->
     </a-scene>
 </body>
 </html>
