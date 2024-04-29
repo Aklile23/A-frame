@@ -12,10 +12,13 @@
     <script src="./scripts/kitchen-material.js"></script>
     <script src="./scripts/couch-change.js"></script>
     <script src="./scripts/light-change.js"></script>
+    <script src="./scripts/oculus-trigger-listener.js"></script>
+    <script src="./scripts/thumbstick-movement.js"></script>
+    <script src="./scripts/menu-toggle.js"></script>
     
 </head>
 <body>
-    <a-scene cursor = 'rayOrigin: mouse'>
+    <a-scene cursor = 'rayOrigin: mouse' menu-toggle>
         <a-assets>
                 <!--glb models/ not interactable-->
             <a-asset-item id="sofa" src="./3D_Models/Sofa.glb"></a-asset-item>
@@ -52,19 +55,20 @@
             
         </a-assets>
         <a-sky src="./textures/sky.jpg"></a-sky>
-        <a-entity id="rig" position="0.6 0 0" rotation=" 0 -180 0">
-            <a-entity camera position="1 1.3 1" look-controls wasd-controls oculus-go-controls="">
+        <a-entity id="rig" position="0.6 0 0" rotation=" 0 -180 0" thumbstick-movement="speed: 5">
+            <a-entity camera position="1 1.3 1" look-controls wasd-controls >
                 <!-- <a-cursor id="cursor" raycaster fuse="true" fusetimeout="3000" color="white"></a-cursor> -->
             </a-entity>
-            <a-entity oculus-touch-controls="hand: left"></a-entity>
-            <a-entity oculus-touch-controls="hand: right"></a-entity>
+            <a-entity oculus-touch-controls="hand: left" laser-controls="hand: left" raycaster="objects: .clickable" ></a-entity>
+            <a-entity oculus-touch-controls="hand: right" laser-controls="hand: right" raycaster="objects: .clickable" ></a-entity>
+
         </a-entity>
         
             <!-- Non-Interactive models-->
-        <a-entity gltf-model="#mat"></a-entity>
-        <a-entity gltf-model="#tv" ></a-entity>
+        <!-- <a-entity gltf-model="#mat"></a-entity>
+        <a-entity gltf-model="#tv" ></a-entity> -->
         <a-entity gltf-model="#curtain"></a-entity>
-        <a-entity gltf-model="#window"></a-entity>
+        <!-- <a-entity gltf-model="#window"></a-entity>
         <a-entity gltf-model="#chair"></a-entity>
         <a-entity gltf-model="#shelf"></a-entity>
         <a-entity gltf-model="#door"></a-entity>
@@ -76,7 +80,7 @@
         <a-entity gltf-model="#roof"></a-entity>
         <a-entity gltf-model="#washer"></a-entity>
         <a-entity gltf-model="#paint"></a-entity>
-        <a-entity gltf-model="#lamp"></a-entity>
+        <a-entity gltf-model="#lamp"></a-entity> -->
         
 
             <!--Interactive models-->
@@ -132,7 +136,7 @@
         
 
             <!-- Menu Setup, Main Menu -->
-        <a-entity id="LivingMenu" position="-1 1.5 0.8" rotation="0 180 0" visible="true">
+        <a-entity id="LivingMenu" position="-1 1.5 0.8" rotation="0 180 0" visible="true" class="menu">
             <a-plane id="background" material="src:./textures/MenuFrame.png; opacity: 0.85" position="0 0.15 0" scale="2 1 1" >
                 <a-plane material="opacity: 0.6" color="#cccccc" position="0 0 0" scale="1 1 1" ></a-plane>
             </a-plane>
@@ -156,13 +160,13 @@
         </a-entity>
 
             <!--Wall Menu-->
-        <a-entity id="WallMenu" position="0 0.3 0.01" rotation="0 180 0" visible="false">
+        <a-entity id="WallMenu" position="0 0.3 0.01" rotation="0 180 0" visible="false" class="menu">
             <a-plane material="src:./textures/MenuFrame.png; opacity: 0.85" position="0 0.15 0" scale="2 1 1" >
                 <a-plane material="opacity: 0.6" color="#cccccc" position="0 0 0" scale="1 1 1" ></a-plane>
             </a-plane>
             
             <a-text value="WALL TEXTURE MENU" align="center" color="#fff" position="0 0.53 0" scale="0.5 0.5"></a-text>
-            <a-plane class="back" material="src:./textures/back.png; opacity: 0.85" color="#ffd500" emissive="#fffff" 
+            <a-plane id="back" material="src:./textures/back.png; opacity: 0.85" color="#ffd500" emissive="#fffff" 
                         emissiveIntensity="0.15" position="-0.85 0.55 0.01" width="1" height="0.2" class="clickable" scale="0.21 0.75 1" 
                         menu-switch="targetMenu: #LivingMenu"></a-plane>
                 <!-- Wall Menu Item 1 -->
@@ -188,16 +192,16 @@
         </a-entity>
 
             <!--Floor Menu-->
-        <a-entity id="FloorMenu" position="0 0.3 0.01" rotation="0 180 0" visible="false">
+        <a-entity id="FloorMenu" position="0 0.3 0.01" rotation="0 180 0" visible="false" class="menu">
             <a-plane material="src:./textures/MenuFrame.png; opacity: 0.85" position="0 0.15 0" scale="2 1 1" >
                 <a-plane material="opacity: 0.6" color="#cccccc" position="0 0 0" scale="1 1 1" ></a-plane>
             </a-plane>
             
             <a-text value="FLOOR TEXTURE MENU" align="center" color="#fff" position="0 0.53 0" scale="0.5 0.5"></a-text>
                 
-            <a-plane class="back" material="src:./textures/back.png; opacity: 0.85" color="#ffd500" emissive="#fffff" 
-                        emissiveIntensity="0.15" position="-0.85 0.55 0.01" width="1" height="0.2" class="clickable" scale="0.21 0.75 1" 
-                        menu-switch="targetMenu: #LivingMenu"></a-plane>
+            <a-plane id="back" material="src:./textures/back.png; opacity: 0.85" color="#ffd500" emissive="#fffff" 
+                        emissiveIntensity="0.15" position="-0.85 0.55 0.02" width="1" height="0.2" class="clickable" 
+                        scale="0.21 0.75 1" menu-switch="targetMenu: #LivingMenu"></a-plane>
                 <!-- Floor Menu Item 1 -->
             <a-plane  material="src: ./textures/floor/1.jpg" position="-0.5 0.343 0.01" width="1" height="0.2" class="clickable" 
                         scale="0.7 0.75 1" floor-material="src: url(./textures/floor/1.jpg)">
@@ -242,14 +246,14 @@
         </a-entity>
 
             <!--Couch Menu-->
-        <a-entity id="CouchMenu" position="0 0.3 0.01" rotation="0 180 0" visible="false">
+        <a-entity id="CouchMenu" position="0 0.3 0.01" rotation="0 180 0" visible="false" class="menu">
             <a-plane material="src:./textures/MenuFrame.png; opacity: 0.85" position="0 0.15 0" scale="2 1 1" >
                 <a-plane material="opacity: 0.6" color="#cccccc" position="0 0 0" scale="1 1 1" ></a-plane>
             </a-plane>
             
             <a-text value="COUCH DESIGN MENU" align="center" color="#fff" position="0 0.53 0" scale="0.5 0.5"></a-text>
                 <!-- Couch Menu Item 1 -->
-            <a-plane class="back" material="src:./textures/back.png; opacity: 0.85" color="#ffd500" emissive="#fffff" 
+            <a-plane id="back" material="src:./textures/back.png; opacity: 0.85" color="#ffd500" emissive="#fffff" 
                         emissiveIntensity="0.15" position="-0.85 0.55 0.01" width="1" height="0.2" class="clickable" scale="0.21 0.75 1" 
                         menu-switch="targetMenu: #LivingMenu"></a-plane>
             <a-plane color="#6A6666" material="opacity: 0.85" position="0 0.343 0.01" width="1" height="0.2" class="clickable" scale="1 0.75 1"
@@ -269,7 +273,7 @@
         </a-entity>
 
             <!--Kitchen menu, main menu-->
-        <a-entity id="KitchenMenu" position="-3.034 1.5 -4.6" rotation="0 0 0" visible="true">
+        <a-entity id="KitchenMenu" position="-3.034 1.5 -4.6" rotation="0 0 0" visible="true" class="menu">
             <a-plane id="background" material="src:./textures/MenuFrame.png; opacity: 0.85" position="0 0.15 0" scale="2 1 1" >
                 <a-plane material="opacity: 0.6" color="#cccccc" position="0 0 0" scale="1 1 1" ></a-plane>
             </a-plane>
@@ -288,13 +292,13 @@
         </a-entity>
 
             <!--Kitchen cabinet menu-->
-        <a-entity id="CabinetMenu" position="0 0.3 0.01" rotation="0 0 0" visible="false">
+        <a-entity id="CabinetMenu" position="0 0.3 0.01" rotation="0 0 0" visible="false" class="menu">
             <a-plane id="background" material="src:./textures/MenuFrame.png; opacity: 0.85" position="0 0.15 0" scale="2 1 1" >
                 <a-plane material="opacity: 0.6" color="#cccccc" position="0 0 0" scale="1 1 1" ></a-plane>
             </a-plane>
             
             <a-text id="Title" value="WOOD TYPES" align="center" color="#fff" position="0 0.5 0" scale="0.5 0.5"></a-text>
-            <a-plane material="src:./textures/back.png; opacity: 0.85" color="#ffd500" emissive="#fffff" 
+            <a-plane id="back" material="src:./textures/back.png; opacity: 0.85" color="#ffd500" emissive="#fffff" 
                         emissiveIntensity="0.15" position="-0.85 0.5 0.01" width="1" height="0.2" class="clickable" scale="0.21 0.75 1" 
                         kitchen-menu-switch="targetMenu: #KitchenMenu"></a-plane>
                 <!-- Menu Item 1 -->
@@ -330,13 +334,13 @@
         </a-entity>
 
             <!--Light Menu-->
-        <a-entity id="UnderLightMenu" position="0 0.3 0.01" rotation="0 0 0" visible="false">
+        <a-entity id="UnderLightMenu" position="0 0.3 0.01" rotation="0 0 0" visible="false" class="menu">
             <a-plane id="background" material="src:./textures/MenuFrame.png; opacity: 0.85" position="0 0.15 0" scale="2 1 1" >
                 <a-plane material="opacity: 0.6" color="#cccccc" position="0 0 0" scale="1 1 1" ></a-plane>
             </a-plane>
             
             <a-text id="Title" value="LIGHT OPTIONS" align="center" color="#fff" position="0 0.5 0" scale="0.5 0.5"></a-text>
-            <a-plane material="src:./textures/back.png; opacity: 0.85" color="#ffd500" emissive="#fffff" 
+            <a-plane id="back" material="src:./textures/back.png; opacity: 0.85" color="#ffd500" emissive="#fffff" 
                         emissiveIntensity="0.15" position="-0.85 0.5 0.01" width="1" height="0.2" class="clickable" scale="0.21 0.75 1" 
                         kitchen-menu-switch="targetMenu: #KitchenMenu"></a-plane>
                 <!-- Menu Item 1 -->
