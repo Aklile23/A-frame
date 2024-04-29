@@ -13,6 +13,8 @@
     <script src="./scripts/couch-change.js"></script>
     <script src="./scripts/light-change.js"></script>
     <script src="./scripts/menu-toggle.js"></script>
+    <script src="./scripts/oculus-trigger-listener.js"></script>
+    <script src="./scripts/thumbstick-movement.js"></script>
     
 </head>
 <body>
@@ -53,12 +55,13 @@
             
         </a-assets>
         <a-sky src="./textures/sky.jpg"></a-sky>
-        <a-entity id="rig" position="0.6 0 0" rotation=" 0 -180 0">
-            <a-entity camera position="1 1.3 1" look-controls wasd-controls oculus-go-controls="">
+        <a-entity id="rig" position="0.6 0 0" rotation=" 0 -180 0" thumbstick-movement="speed: 5">
+            <a-entity camera position="1 1.3 1" look-controls wasd-controls >
                 <!-- <a-cursor id="cursor" raycaster fuse="true" fusetimeout="3000" color="white"></a-cursor> -->
             </a-entity>
-            <a-entity oculus-touch-controls="hand: left"></a-entity>
-            <a-entity oculus-touch-controls="hand: right"></a-entity>
+            <a-entity oculus-touch-controls="hand: left" laser-controls="hand: left" raycaster="objects: .clickable" ></a-entity>
+            <a-entity oculus-touch-controls="hand: right" laser-controls="hand: right" raycaster="objects: .clickable" ></a-entity>
+
         </a-entity>
         
             <!-- Non-Interactive models-->
