@@ -12,9 +12,15 @@
     <script src="./scripts/kitchen-material.js"></script>
     <script src="./scripts/couch-change.js"></script>
     <script src="./scripts/light-change.js"></script>
+<<<<<<< HEAD
     <script src="./scripts/oculus-trigger-listener.js"></script>
     <script src="./scripts/thumbstick-movement.js"></script>
     <script src="./scripts/menu-toggle.js"></script>
+=======
+    <script src="./scripts/menu-toggle.js"></script>
+    <script src="./scripts/oculus-trigger-listener.js"></script>
+    <script src="./scripts/thumbstick-movement.js"></script>
+>>>>>>> c247387c75121255aecdb36308df23c4e8a1d7d2
     
 </head>
 <body>
@@ -88,7 +94,7 @@
         <a-obj-model id="floor" src="#Floor" material="src: ./textures/floor/3.jpg; repeat: 1 2"></a-obj-model>
         <a-obj-model id="kitchen" src="#kitchenKabinet" material="src: ./textures/kitchen/6.jpg; repeat: 3 2"></a-obj-model>
 
-        <a-entity id="couch" gltf-model="#sofa"></a-entity>
+        <!-- <a-entity id="couch" gltf-model="#sofa"></a-entity>
         <a-entity id="couch2" visible="false">
             <a-entity gltf-model="#sofa2" position="-1.715 0 2.237" rotation="0 180 0"></a-entity>
             <a-entity gltf-model="#sofa2" position="-0.116 0 0.702" rotation="0 -90 0"></a-entity>
@@ -99,7 +105,7 @@
             <a-entity gltf-model="#sofa3" position="-1.715 0 2.237" rotation="0 180 0"></a-entity>
             <a-entity gltf-model="#sofa3" position="-0.116 0 0.702" rotation="0 -90 0"></a-entity>
             <a-entity gltf-model="#table3" position="-1.6 0 0.819" rotation="0 0 0"></a-entity>
-        </a-entity>
+        </a-entity> -->
 
         <a-obj-model id="spotLight" src="#Klamp" color="#c2c2c2" visible="true">
             <a-sphere position="-4.346 2.068 -5.338" scale="0.064 0.029 0.064" emissive="#ffffff" emissiveIntensity="10"></a-sphere>
@@ -292,7 +298,11 @@
         </a-entity>
 
             <!--Kitchen cabinet menu-->
+<<<<<<< HEAD
         <a-entity id="CabinetMenu" position="0 0.3 0.01" rotation="0 0 0" visible="false" class="menu">
+=======
+        <a-entity id="CabinetMenu" position="0 0.3 0.01" rotation="0 0 0" visible="false" class="menu"> 
+>>>>>>> c247387c75121255aecdb36308df23c4e8a1d7d2
             <a-plane id="background" material="src:./textures/MenuFrame.png; opacity: 0.85" position="0 0.15 0" scale="2 1 1" >
                 <a-plane material="opacity: 0.6" color="#cccccc" position="0 0 0" scale="1 1 1" ></a-plane>
             </a-plane>
