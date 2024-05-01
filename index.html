@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <title>Design Customization by VisionLab</title>
     <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>  <!--for PDF-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.23/jspdf.plugin.autotable.min.js"></script>
     <script src="./scripts/color-toggle.js"></script>
     <script src="./scripts/menuSwitch.js"></script>
     <script src="./scripts//change-wall-color.js"></script>
@@ -15,13 +17,19 @@
     <script src="./scripts/oculus-trigger-listener.js"></script>
     <script src="./scripts/thumbstick-movement.js"></script>
     <script src="./scripts/menu-toggle.js"></script>
-    <script src="https://unpkg.com/aframe-extras/dist/aframe-extras.min.js"></script>
-
+    <script src="./scripts/updateReviewWall.js"></script>
+    <script src="./scripts/updateReviewFloor.js"></script>
+    <script src="./scripts/generate-pdf.js"></script>
 
     
 </head>
 <body>
-    <a-scene cursor = 'rayOrigin: mouse' physics="gravity: 0" menu-toggle>
+    <a-scene cursor = 'rayOrigin: mouse' physics="gravity: 0" obb-collider="showColliders: false">
+
+        <a-entity id="player" obb-collider="collider: .collidable" position="0 1.5 0">
+            <!-- Player geometry or components -->
+          </a-entity>
+
         <a-assets>
                 <!--glb models/ not interactable-->
             <a-asset-item id="sofa" src="./3D_Models/Sofa.glb"></a-asset-item>
@@ -43,9 +51,6 @@
             <a-asset-item id="lamp" src="./3D_Models/lamp.glb"></a-asset-item>
             <a-asset-item id="Klamp" src="./3D_Models/KitchenLamp.obj"></a-asset-item>
 
-            
-            
-
                 <!--obj models/ interactable-->
             <a-asset-item id="walls" src="./3D_Models/walls.obj" static-body></a-asset-item>
             <a-asset-item id="Floor" src="./3D_Models/floor.obj"></a-asset-item>
@@ -58,20 +63,18 @@
             
         </a-assets>
         <a-sky src="./textures/sky.jpg"></a-sky>
-        <a-entity id="rig" position="0.6 0 0" rotation=" 0 -180 0" kinematic-body="mass: 5; shape: box;">
-            <a-entity camera position="1 1.3 1" look-controls wasd-controls >
-                <!-- <a-cursor id="cursor" raycaster fuse="true" fusetimeout="3000" color="white"></a-cursor> -->
-            </a-entity>
+        <a-entity  position="0 0 0" rotation="0 180 0">
+            <a-camera id="rig" position="1 1.3 1" look-controls wasd-controls menu-toggle>
             <a-entity oculus-touch-controls="hand: left" laser-controls="hand: left" raycaster="objects: .clickable" thumb-controls="hand: left" ></a-entity>
             <a-entity oculus-touch-controls="hand: right" laser-controls="hand: right" raycaster="objects: .clickable" thumb-controls="hand: right"></a-entity>
-
+        </a-camera>
         </a-entity>
         
             <!-- Non-Interactive models-->
-        <!-- <a-entity gltf-model="#mat"></a-entity>
-        <a-entity gltf-model="#tv" ></a-entity> -->
+        <a-entity gltf-model="#mat"></a-entity>
+        <a-entity gltf-model="#tv" ></a-entity>
         <a-entity gltf-model="#curtain"></a-entity>
-        <!-- <a-entity gltf-model="#window"></a-entity>
+        <a-entity gltf-model="#window"></a-entity>
         <a-entity gltf-model="#chair"></a-entity>
         <a-entity gltf-model="#shelf"></a-entity>
         <a-entity gltf-model="#door"></a-entity>
@@ -83,7 +86,7 @@
         <a-entity gltf-model="#roof"></a-entity>
         <a-entity gltf-model="#washer"></a-entity>
         <a-entity gltf-model="#paint"></a-entity>
-        <a-entity gltf-model="#lamp"></a-entity> -->
+        <a-entity gltf-model="#lamp"></a-entity>
         
 
             <!--Interactive models-->
@@ -91,7 +94,7 @@
         <a-obj-model id="floor" src="#Floor" material="src: ./textures/floor/3.jpg; repeat: 1 2"></a-obj-model>
         <a-obj-model id="kitchen" src="#kitchenKabinet" material="src: ./textures/kitchen/6.jpg; repeat: 3 2"></a-obj-model>
 
-        <!-- <a-entity id="couch" gltf-model="#sofa"></a-entity>
+        <a-entity id="couch" gltf-model="#sofa"></a-entity>
         <a-entity id="couch2" visible="false">
             <a-entity gltf-model="#sofa2" position="-1.715 0 2.237" rotation="0 180 0"></a-entity>
             <a-entity gltf-model="#sofa2" position="-0.116 0 0.702" rotation="0 -90 0"></a-entity>
@@ -102,7 +105,7 @@
             <a-entity gltf-model="#sofa3" position="-1.715 0 2.237" rotation="0 180 0"></a-entity>
             <a-entity gltf-model="#sofa3" position="-0.116 0 0.702" rotation="0 -90 0"></a-entity>
             <a-entity gltf-model="#table3" position="-1.6 0 0.819" rotation="0 0 0"></a-entity>
-        </a-entity> -->
+        </a-entity>
 
         <a-obj-model id="spotLight" src="#Klamp" color="#c2c2c2" visible="true">
             <a-sphere position="-4.346 2.068 -5.338" scale="0.064 0.029 0.064" emissive="#ffffff" emissiveIntensity="10"></a-sphere>
@@ -136,7 +139,6 @@
             <a-cylinder color="#04b97d" position="-5.122 2.047 -5.790" rotation="90 -90 0" scale="0.030 2.915 0.030" emissive="#04b97d"></a-cylinder>
             <a-entity light="intensity: 2.65; castShadow: true; angle: 102.69; color: #04b97d; type: point; decay: 0.82; distance: 1.6" position="-5.36963 1.55022 -5.24585" data-aframe-default-light="" aframe-injected="" visible="" rotation=""></a-entity>
         </a-entity>
-        
 
             <!-- Menu Setup, Main Menu -->
         <a-entity id="LivingMenu" position="-1 1.5 0.8" rotation="0 180 0" visible="true" class="menu">
@@ -144,21 +146,23 @@
                 <a-plane material="opacity: 0.6" color="#cccccc" position="0 0 0" scale="1 1 1" ></a-plane>
             </a-plane>
             
-            <a-text id="Title" value="WHAT DO YOU WANT TO CHANGE?" align="center" color="#fff" position="0 0.5 0" scale="0.5 0.5"></a-text>
+            <a-text id="Title" value="WHAT DO YOU WANT TO CHANGE?" align="center" color="#fff" position="0 0.56245 0" scale="0.38088 0.38088 0.76174" text=""></a-text>
                 <!-- Menu Item 1 -->
-            <a-plane material="src:./textures/ButtonFrame.png; opacity: 0.85" position="0 0.3 0.01" width="1" height="0.2" class="clickable" 
-                        scale="1 0.8 1" menu-switch="targetMenu: #WallMenu">
-                <a-text value="WALL COLOR" align="center" color="#fff" scale="0.5 0.5"></a-text>
+            <a-plane material="src: ./textures/ButtonFrame.png; opacity: 0.85" position="0 0.4 0.01" width="1" height="0.2" class="clickable" 
+                        scale="0.85 0.7 0.85" menu-switch="targetMenu: #WallMenu" geometry="">
+                <a-text value="WALL COLOR" align="center" color="#fff" scale="0.5 0.5 1" text=""></a-text>
             </a-plane>
                 <!-- Menu Item 2 -->
-            <a-plane material="src:./textures/ButtonFrame.png; opacity: 0.85" position="0 0.075 0.01" width="1" height="0.2" class="clickable" 
-                        scale="1 0.8 1" menu-switch="targetMenu: #FloorMenu">
-                <a-text value="FLOOR DESIGN" align="center"="#FFF" scale="0.5 0.5"></a-text>
+            <a-plane material="src: ./textures/ButtonFrame.png; opacity: 0.85" position="0 0.19391 0.01" width="1" height="0.2" class="clickable" scale="0.85 0.7 0.85" menu-switch="targetMenu: #FloorMenu" geometry="">
+                <a-text value="FLOOR DESIGN" align="center" ="#fff"="" scale="0.5 0.5 1" text=""></a-text>
             </a-plane>
                 <!-- Menu Item 3 -->
-            <a-plane material="src:./textures/ButtonFrame.png; opacity: 0.85" position="0 -0.15 0.01" width="1" height="0.2" class="clickable" 
-                        scale="1 0.8 1" menu-switch="targetMenu: #CouchMenu">
-                <a-text value="COUCH DESIGN" align="center" color="#FFF" scale="0.5 0.5"></a-text>
+            <a-plane material="src: ./textures/ButtonFrame.png; opacity: 0.85" position="0 -0.01277 0.01" width="1" height="0.2" class="clickable" scale="0.85 0.7 0.85" menu-switch="targetMenu: #CouchMenu" geometry="">
+                <a-text value="COUCH DESIGN" align="center" color="#FFF" scale="0.5 0.5 1" text=""></a-text>
+            </a-plane>
+                <!--review and confirm-->
+            <a-plane  color= "#b18d2b" position="0 -0.20212 0.01" width="1" height="0.2" class="clickable" scale="0.85 0.7 0.85" menu-switch="targetMenu: #ReviewMenu" geometry="">
+                <a-text value="Review & Confirm" align="center" color="#FFF" scale="0.5 0.5 1" text=""></a-text>
             </a-plane>
         </a-entity>
 
@@ -173,23 +177,23 @@
                         emissiveIntensity="0.15" position="-0.85 0.55 0.01" width="1" height="0.2" class="clickable" scale="0.21 0.75 1" 
                         menu-switch="targetMenu: #LivingMenu"></a-plane>
                 <!-- Wall Menu Item 1 -->
-            <a-plane color="#6A6666" material="opacity: 0.85" position="0 0.343 0.01" width="1" height="0.2" class="clickable" scale="1 0.75 1"
-                     change-wall-color="color: #6A6666">
+            <a-plane id="Grey" color="#6A6666" material="opacity: 0.85" position="0 0.343 0.01" width="1" height="0.2" class="clickable" scale="1 0.75 1"
+                     change-wall-color="color: #6A6666" update-review-wall = "targetChoice: #Grey">
                 <a-text value="GREY" align="center" color="#fff" scale="0.5 0.5"></a-text>
             </a-plane>
                 <!-- Wall Menu Item 2 -->
-            <a-plane color="#566F6F" material="opacity: 0.85" position="0 0.16 0.01" width="1" height="0.2" class="clickable" scale="1 0.75 1"
-                     change-wall-color="color: #566F6F">
+            <a-plane id="Green" color="#566F6F" material="opacity: 0.85" position="0 0.16 0.01" width="1" height="0.2" class="clickable" scale="1 0.75 1"
+                     change-wall-color="color: #566F6F" update-review-wall = "targetChoice: #Green">
                 <a-text value="GREEN" align="center"="#FFF" scale="0.5 0.5"></a-text>
             </a-plane>
                 <!-- Wall Menu Item 3 -->
-            <a-plane color="#39657B" material="opacity: 0.85" position="0 -0.035 0.01" width="1" height="0.2" class="clickable" scale="1 0.75 1"
-                     change-wall-color="color: #39657B">
+            <a-plane id="Blue" color="#39657B" material="opacity: 0.85" position="0 -0.035 0.01" width="1" height="0.2" class="clickable" scale="1 0.75 1"
+                     change-wall-color="color: #39657B" update-review-wall = "targetChoice: #Blue">
                 <a-text value="BLUE" align="center" color="#FFF" scale="0.5 0.5"></a-text>
             </a-plane>
                 <!-- Wall Menu Item 4 -->
-            <a-plane color="#CA8640" material="opacity: 0.85" position="0 -0.218 0.01" width="1" height="0.2" class="clickable" scale="1 0.75 1"
-                     change-wall-color="color: #CA8640">
+            <a-plane id="Orange" color="#CA8640" material="opacity: 0.85" position="0 -0.218 0.01" width="1" height="0.2" class="clickable" scale="1 0.75 1"
+                     change-wall-color="color: #CA8640" update-review-wall = "targetChoice: #Orange">
                 <a-text value="ORANGE" align="center" color="#FFF" scale="0.5 0.5"></a-text>
             </a-plane>
         </a-entity>
@@ -206,43 +210,43 @@
                         emissiveIntensity="0.15" position="-0.85 0.55 0.02" width="1" height="0.2" class="clickable" 
                         scale="0.21 0.75 1" menu-switch="targetMenu: #LivingMenu"></a-plane>
                 <!-- Floor Menu Item 1 -->
-            <a-plane  material="src: ./textures/floor/1.jpg" position="-0.5 0.343 0.01" width="1" height="0.2" class="clickable" 
-                        scale="0.7 0.75 1" floor-material="src: url(./textures/floor/1.jpg)">
+            <a-plane id="Wood1"  material="src: ./textures/floor/1.jpg" position="-0.5 0.343 0.01" width="1" height="0.2" class="clickable" 
+                        scale="0.7 0.75 1" floor-material="src: url(./textures/floor/1.jpg)" update-review-floor="targetChoice: #Wood1">
                 <a-text value="WOOD 1" align="center" color="#fff" scale="0.5 0.5"></a-text>
             </a-plane>
                 <!-- Floor Menu Item 2 -->
-            <a-plane material="src: ./textures/floor/2.jpg" position="-0.5 0.16 0.01" width="1" height="0.2" class="clickable" 
-                        scale="0.7 0.75 1" floor-material="src: url(./textures/floor/2.jpg)">
+            <a-plane id="Wood2" material="src: ./textures/floor/2.jpg" position="-0.5 0.16 0.01" width="1" height="0.2" class="clickable" 
+                        scale="0.7 0.75 1" floor-material="src: url(./textures/floor/2.jpg)" update-review-floor="targetChoice: #Wood2">
                 <a-text value="WOOD 2" align="center"="#FFF" scale="0.5 0.5"></a-text>
             </a-plane>
                 <!-- Floor Menu Item 3 -->
-            <a-plane material="src: ./textures/floor/3.jpg" position="-0.5 -0.035 0.01" width="1" height="0.2" class="clickable" 
-                        scale="0.7 0.75 1" floor-material="src: url(./textures/floor/3.jpg)">
+            <a-plane id="Wood3" material="src: ./textures/floor/3.jpg" position="-0.5 -0.035 0.01" width="1" height="0.2" class="clickable" 
+                        scale="0.7 0.75 1" floor-material="src: url(./textures/floor/3.jpg)" update-review-floor="targetChoice: #Wood3">
                 <a-text value="WOOD 3" align="center" color="#FFF" scale="0.5 0.5"></a-text>
             </a-plane>
                 <!-- Floor Menu Item 4 -->
-            <a-plane material="src: ./textures/floor/4.jpg" position="-0.5 -0.218 0.01" width="1" height="0.2" class="clickable" 
-                        scale="0.7 0.75 1" floor-material="src: url(./textures/floor/4.jpg)">
+            <a-plane id="Wood4" material="src: ./textures/floor/4.jpg" position="-0.5 -0.218 0.01" width="1" height="0.2" class="clickable" 
+                        scale="0.7 0.75 1" floor-material="src: url(./textures/floor/4.jpg)" update-review-floor="targetChoice: #Wood4">
                 <a-text value="WOOD 4" align="center" color="#FFF" scale="0.5 0.5"></a-text>
             </a-plane>
                 <!-- Floor Menu Item 5 -->
-            <a-plane material="src: ./textures/floor/6.jpg" position="0.45 -0.218 0.01" width="1" height="0.2" class="clickable" 
-                        scale="0.7 0.75 1" floor-material="src: url(./textures/floor/6.jpg)">
+            <a-plane id="Ceramic4" material="src: ./textures/floor/6.jpg" position="0.45 -0.218 0.01" width="1" height="0.2" class="clickable" 
+                        scale="0.7 0.75 1" floor-material="src: url(./textures/floor/6.jpg)" update-review-floor="targetChoice: #Ceramic4">
                 <a-text value="CERAMIC 4" align="center" color="#FFF" scale="0.5 0.5"></a-text>
             </a-plane>
                 <!-- Floor Menu Item 6 -->
-            <a-plane material="src: ./textures/floor/7.jpg" position="0.45 -0.035 0.01" width="1" height="0.2" class="clickable" 
-                        scale="0.7 0.75 1" floor-material="src: url(./textures/floor/7.jpg)">
+            <a-plane id="Ceramic3" material="src: ./textures/floor/7.jpg" position="0.45 -0.035 0.01" width="1" height="0.2" class="clickable" 
+                        scale="0.7 0.75 1" floor-material="src: url(./textures/floor/7.jpg)" update-review-floor="targetChoice: #Ceramic3">
                 <a-text value="CERAMIC 3" align="center" color="#FFF" scale="0.5 0.5"></a-text>
             </a-plane>
                 <!-- Floor Menu Item 7 -->
-            <a-plane material="src: ./textures/floor/8.jpg" position="0.45 0.16 0.01" width="1" height="0.2" class="clickable" 
-                        scale="0.7 0.75 1" floor-material="src: url(./textures/floor/8.jpg)">
+            <a-plane id="Ceramic2" material="src: ./textures/floor/8.jpg" position="0.45 0.16 0.01" width="1" height="0.2" class="clickable" 
+                        scale="0.7 0.75 1" floor-material="src: url(./textures/floor/8.jpg)" update-review-floor="targetChoice: #Ceramic2">
                 <a-text value="CERAMIC 2" align="center"="#FFF" scale="0.5 0.5"></a-text>
             </a-plane>
                 <!-- Floor Menu Item 8 -->
-            <a-plane material="src: ./textures/floor/9.jpg" position="0.45 0.343 0.01" width="1" height="0.2" class="clickable" 
-                        scale="0.7 0.75 1" floor-material="src: url(./textures/floor/9.jpg)">
+            <a-plane id="Ceramic1" material="src: ./textures/floor/9.jpg" position="0.45 0.343 0.01" width="1" height="0.2" class="clickable" 
+                        scale="0.7 0.75 1" floor-material="src: url(./textures/floor/9.jpg)" update-review-floor="targetChoice: #Ceramic1">
                 <a-text value="CERAMIC 1" align="center" color="#fff" scale="0.5 0.5"></a-text>
             </a-plane>
             
@@ -259,17 +263,17 @@
             <a-plane id="back" material="src:./textures/back.png; opacity: 0.85" color="#ffd500" emissive="#fffff" 
                         emissiveIntensity="0.15" position="-0.85 0.55 0.01" width="1" height="0.2" class="clickable" scale="0.21 0.75 1" 
                         menu-switch="targetMenu: #LivingMenu"></a-plane>
-            <a-plane color="#6A6666" material="opacity: 0.85" position="0 0.343 0.01" width="1" height="0.2" class="clickable" scale="1 0.75 1"
+            <a-plane id="Couch 1" color="#6A6666" material="opacity: 0.85" position="0 0.343 0.01" width="1" height="0.2" class="clickable" scale="1 0.75 1"
                         couch-change="targetCouch: #couch">
                 <a-text value="COUCH 1" align="center" color="#fff" scale="0.5 0.5"></a-text>
             </a-plane>
                 <!-- Couch Menu Item 2 -->
-            <a-plane color="#566F6F" material="opacity: 0.85" position="0 0.16 0.01" width="1" height="0.2" class="clickable" scale="1 0.75 1"
+            <a-plane id="Couch 2" color="#566F6F" material="opacity: 0.85" position="0 0.16 0.01" width="1" height="0.2" class="clickable" scale="1 0.75 1"
                         couch-change="targetCouch: #couch2">
                 <a-text value="COUCH 2" align="center"="#FFF" scale="0.5 0.5"></a-text>
             </a-plane>
                 <!-- Couch Menu Item 3 -->
-            <a-plane color="#39657B" material="opacity: 0.85" position="0 -0.035 0.01" width="1" height="0.2" class="clickable" scale="1 0.75 1"
+            <a-plane id="Couch 3" color="#39657B" material="opacity: 0.85" position="0 -0.035 0.01" width="1" height="0.2" class="clickable" scale="1 0.75 1"
                         couch-change="targetCouch: #couch3">
                 <a-text value="COUCH 3" align="center" color="#FFF" scale="0.5 0.5"></a-text>
             </a-plane>
@@ -305,33 +309,33 @@
                         emissiveIntensity="0.15" position="-0.85 0.5 0.01" width="1" height="0.2" class="clickable" scale="0.21 0.75 1" 
                         kitchen-menu-switch="targetMenu: #KitchenMenu"></a-plane>
                 <!-- Menu Item 1 -->
-            <a-plane material="src: ./textures/kitchen/1.jpg" position="-0.4 0.3 0.01" width="1" height="0.2" class="clickable" 
-                        scale="0.7 0.8 1" kitchen-material="src: url(./textures/kitchen/1.jpg)">
+            <a-plane id="Type1" material="src: ./textures/kitchen/1.jpg" position="-0.4 0.3 0.01" width="1" height="0.2" class="clickable" 
+                        scale="0.7 0.8 1" kitchen-material="src: url(./textures/kitchen/1.jpg)" update-review-wall = "targetChoice: #Type1">
                 <a-text value="TYPE 1" align="center" color="#fff" scale="0.5 0.5"></a-text>
             </a-plane>
                 <!-- Menu Item 2 -->
-            <a-plane material="src: ./textures/kitchen/2.jpg" position="-0.4 0.075 0.01" width="1" height="0.2" class="clickable" 
-                        scale="0.7 0.8 1" kitchen-material="src: url(./textures/kitchen/2.jpg)">
+            <a-plane id="Type2" material="src: ./textures/kitchen/2.jpg" position="-0.4 0.075 0.01" width="1" height="0.2" class="clickable" 
+                        scale="0.7 0.8 1" kitchen-material="src: url(./textures/kitchen/2.jpg)" update-review-wall = "targetChoice: #Type2">
                 <a-text value="TYPE 2" align="center"="#FFF" scale="0.5 0.5"></a-text>
             </a-plane>
                 <!-- Menu Item 3 -->
-            <a-plane material="src: ./textures/kitchen/3.jpg" position="-0.4 -0.15 0.01" width="1" height="0.2" class="clickable" 
-                        scale="0.7 0.8 1" kitchen-material="src: url(./textures/kitchen/3.jpg)">
+            <a-plane id="Type3" material="src: ./textures/kitchen/3.jpg" position="-0.4 -0.15 0.01" width="1" height="0.2" class="clickable" 
+                        scale="0.7 0.8 1" kitchen-material="src: url(./textures/kitchen/3.jpg)" update-review-wall = "targetChoice: #Type3">
                 <a-text value="TYPE 3" align="center" color="#FFF" scale="0.5 0.5"></a-text>
             </a-plane>
                 <!-- Menu Item 4 -->
-            <a-plane material="src: ./textures/kitchen/4.jpg" position="0.4 0.3 0.01" width="1" height="0.2" class="clickable" 
-                        scale="0.7 0.8 1" kitchen-material="src: url(./textures/kitchen/4.jpg)">
+            <a-plane id="Type4" material="src: ./textures/kitchen/4.jpg" position="0.4 0.3 0.01" width="1" height="0.2" class="clickable" 
+                        scale="0.7 0.8 1" kitchen-material="src: url(./textures/kitchen/4.jpg)" update-review-wall = "targetChoice: #Type4">
                 <a-text value="TYPE 4" align="center" color="#fff" scale="0.5 0.5"></a-text>
             </a-plane>
                 <!-- Menu Item 5 -->
-            <a-plane material="src: ./textures/kitchen/5.jpg" position="0.4 0.075 0.01" width="1" height="0.2" class="clickable" 
-                        scale="0.7 0.8 1" kitchen-material="src: url(./textures/kitchen/5.jpg)">
+            <a-plane id="Type5" material="src: ./textures/kitchen/5.jpg" position="0.4 0.075 0.01" width="1" height="0.2" class="clickable" 
+                        scale="0.7 0.8 1" kitchen-material="src: url(./textures/kitchen/5.jpg)" update-review-wall = "targetChoice: #Type5">
                 <a-text value="TYPE 5" align="center" color="#fff" scale="0.5 0.5"></a-text>
             </a-plane>
                 <!-- Menu Item 6 -->
-            <a-plane material="src: ./textures/kitchen/6.jpg" position="0.4 -0.15 0.01" width="1" height="0.2" class="clickable" 
-                        scale="0.7 0.8 1" kitchen-material="src: url(./textures/kitchen/6.jpg)">
+            <a-plane id="Type6" material="src: ./textures/kitchen/6.jpg" position="0.4 -0.15 0.01" width="1" height="0.2" class="clickable" 
+                        scale="0.7 0.8 1" kitchen-material="src: url(./textures/kitchen/6.jpg)" update-review-wall = "targetChoice: #Type6">
                 <a-text value="TYPE 6" align="center" color="#fff" scale="0.5 0.5"></a-text>
             </a-plane>
         </a-entity>
@@ -347,43 +351,81 @@
                         emissiveIntensity="0.15" position="-0.85 0.5 0.01" width="1" height="0.2" class="clickable" scale="0.21 0.75 1" 
                         kitchen-menu-switch="targetMenu: #KitchenMenu"></a-plane>
                 <!-- Menu Item 1 -->
-            <a-plane color="#3c96b4" position="-0.4 0.3 0.01" width="1" height="0.2" class="clickable" 
+            <a-plane id="BlueL" color="#3c96b4" position="-0.4 0.3 0.01" width="1" height="0.2" class="clickable" 
                         scale="0.7 0.8 1" light-change="targetLight: #BlueNeon">
                 <a-text value="BLUE" align="center" color="#fff" scale="0.5 0.5"></a-text>
             </a-plane>
                 <!-- Menu Item 2 -->
-            <a-plane color="#f04747" position="-0.4 0.075 0.01" width="1" height="0.2" class="clickable" 
+            <a-plane id="RedL" color="#f04747" position="-0.4 0.075 0.01" width="1" height="0.2" class="clickable" 
                         scale="0.7 0.8 1" light-change="targetLight: #RedNeon">
                 <a-text value="RED" align="center"="#FFF" scale="0.5 0.5"></a-text>
             </a-plane>
                 <!-- Menu Item 3 -->
-            <a-plane color="#e1ee2b" position="-0.4 -0.15 0.01" width="1" height="0.2" class="clickable" 
+            <a-plane id="YellowL" color="#e1ee2b" position="-0.4 -0.15 0.01" width="1" height="0.2" class="clickable" 
                         scale="0.7 0.8 1" light-change="targetLight: #YellowNeon">
                 <a-text value="YELLOW" align="center" color="#FFF" scale="0.5 0.5"></a-text>
             </a-plane>
                 <!-- Menu Item 4 -->
-            <a-plane color="#04b97d" position="0.4 0.3 0.01" width="1" height="0.2" class="clickable" 
+            <a-plane id="GreenL" color="#04b97d" position="0.4 0.3 0.01" width="1" height="0.2" class="clickable" 
                         scale="0.7 0.8 1" light-change="targetLight: #GreenNeon">
                 <a-text value="GREEN" align="center" color="#fff" scale="0.5 0.5"></a-text>
             </a-plane>
                 <!-- Menu Item 5 -->
-            <a-plane material="src:./textures/MenuFrame.png; opacity: 0.85" position="0.4 0.075 0.01" width="1" height="0.2" class="clickable" 
+            <a-plane id="Spot" material="src:./textures/MenuFrame.png; opacity: 0.85" position="0.4 0.075 0.01" width="1" height="0.2" class="clickable" 
                         scale="0.7 0.8 1" light-change="targetLight: #spotLight">
                 <a-text value="SPOT LIGHT" align="center" color="#fff" scale="0.5 0.5"></a-text>
             </a-plane>
         </a-entity>
 
+            <!--Review Menu-->
+        <a-entity id="ReviewMenu" position="-1 1.5 0.8" rotation="0 180 0" visible="false" class="menu">
+            <a-plane id="background" material="src: ./textures/MenuFrame.png; opacity: 0.85" position="0.0525 0.15 0" scale="2.13783 1 1" geometry="">
+                <a-plane material="opacity: 0.6" color="#cccccc" position="" scale="" geometry=""></a-plane>
+            </a-plane>>
+
+            <a-text id="Title" value="Review and Checkout" align="center" color="#fff" position="0 0.56245 0" scale="0.38088 0.38088 0.76174" text=""></a-text>
+
+            <a-plane id="back" material="src:./textures/back.png; opacity: 0.85" color="#ffd500" emissive="#fffff" 
+                        emissiveIntensity="0.15" position="-0.85 0.55 0.01" width="1" height="0.2" class="clickable" scale="0.21 0.75 1" 
+                        menu-switch="targetMenu: #LivingMenu"></a-plane>
+            <a-text id="wallColor" value="Wall Color: " text="" position="-0.62345 0.4 0" scale="0.33779 0.33779 0.33779"></a-text>
+            <a-text id="floor" value="Floor Material: " text="" position="-0.746 0.3 0" scale="0.33779 0.33779 0.33779"></a-text>
+            <a-text id="couch" value="Couch: " text="" position="-0.50345 0.2 0" scale="0.33779 0.33779 0.33779"></a-text>
+            <a-text id="cabinet" value="Cabinet: " text="" position="-0.54345 0.1 0" scale="0.33779 0.33779 0.33779"></a-text>
+            <a-text id="kitchenLight" value="Kitchen Light: " text="" position="-0.72045 0 0" scale="0.33779 0.33779 0.33779"></a-text>
+            <a-text id="total" value="Total: " text="value: Total:" position="-0.1159 -0.2 0" scale="0.338 0.338 0.338"></a-text>
+
+            <a-text id="wallChoice" value="" position="-0.22585 0.4 0" scale="0.33779 0.33779 0.33779"></a-text>
+            <a-text id="floorChoice" value="" position="-0.22585 0.3 0" scale="0.33779 0.33779 0.33779"></a-text>
+            <a-text id="couchChoice" value="" position="-0.22585 0.2 0" scale="0.33779 0.33779 0.33779"></a-text>
+            <a-text id="cabinetChoice" value="" position="-0.22585 0.1 0" scale="0.33779 0.33779 0.33779"></a-text>
+            <a-text id="kitchenLightChoice" value="" position="-0.22585 0 0" scale="0.33779 0.33779 0.33779"></a-text>
+            <a-text id="totalChoice" value="" position="-0.22585 0 0" scale="0.33779 0.33779 0.33779"></a-text>
+
+            <a-text id="wallPrice" value="0.00 USD" position="0.13155 0.4 0" scale="0.33779 0.33779 0.33779"></a-text>
+            <a-text id="floorPrice" value="0.00 USD" position="0.13155 0.3 0" scale="0.33779 0.33779 0.33779"></a-text>
+            <a-text id="couchPrice" value="0.00 USD" position="0.13155 0.2 0" scale="0.33779 0.33779 0.33779"></a-text>
+            <a-text id="cabinetPrice" value="0.00 USD" position="0.13155 0.1 0" scale="0.33779 0.33779 0.33779"></a-text>
+            <a-text id="kitchenLightPrice" value="0.00 USD" position="0.13155 0 0" scale="0.33779 0.33779 0.33779"></a-text>
+            <a-text id="totalPrice" value="0.00 USD" position="0.13155 -0.2 0" scale="0.33779 0.33779 0.33779"></a-text>
+
+                <!--review and confirm-->
+            <a-plane id="finishAndDownload" color="#b18d2b" position="0.78529 -0.19651 0.01" width="1" height="0.2" class="clickable" scale="0.54731 0.64 0.599" menu-switch="targetMenu: #ReviewMenu" geometry="" material="">
+                <a-text value="FINISH &amp; DOWNLOAD" align="center" color="#FFF" scale="0.42405 0.42405 0.84809" text=""></a-text>
+            </a-plane>
+        </a-entity>
+
             <!--Boundaries-->
         <!-- <a-entity id="boundary">
-            <a-box material="alphaTest: 1; side: double; transparent: true; blending: multiply; color: #ffffff" geometry="" position="-0.93615 1.4762 3.23559" scale="10.51102 4.16059 0.07776" static-body></a-box>
-            <a-box material="alphaTest: 1; side: double; transparent: true; blending: multiply; color: #ffffff" geometry="" position="4.63362 1.4762 2.21601" scale="6.00254 4.16059 1.29074" rotation="0 90 0" static-body></a-box>
-            <a-box material="alphaTest: 1; side: double; transparent: true; blending: multiply; color: #ffffff" geometry="" position="5.41853 1.4762 -0.98175" scale="6.00254 4.16059 1.8247" rotation="0 90 0" static-body ></a-box>
-            <a-box material="alphaTest: 1; side: double; transparent: true; blending: multiply; color: #ffffff" geometry="" position="8.19497 1.476 -1.21285" scale="2.94983 4.16059 3.90289" rotation="0 90 0" static-body></a-box>
-            <a-box material="alphaTest: 1; side: double; transparent: true; blending: multiply; color: #ffffff" geometry="" position="11.72324 1.476 -5.4514" scale="6.1563 4.16059 3.90289" rotation="0 90 0" static-body></a-box>
-            <a-box material="alphaTest: 1; side: double; transparent: true; blending: multiply; color: #ffffff" geometry="" position="5.39618 1.476 -8.47803" scale="0.90893 4.16059 10.06064" rotation="0 90 0" static-body></a-box>
-            <a-box material="alphaTest: 1; side: double; transparent: true; blending: multiply; color: #ffffff" geometry="" position="-0.65166 1.476 -5.89607" scale="6.61001 4.16059 2.62242" rotation="0 90 0" static-body></a-box>
-            <a-box material="alphaTest: 1; side: double; transparent: true; blending: multiply; color: #ffffff" geometry="" position="-4.2988 1.56285 -5.65069" scale="1.39348 4.16059 5.27787" rotation="0 90 0" static-body></a-box>
-            <a-box material="alphaTest: 1; side: double; transparent: true; blending: multiply; color: #ffffff" geometry="" position="-6.94987 1.56285 -0.70115" scale="10.01276 4.16059 1.98454" rotation="0 90 0" static-body></a-box>
+            <a-box id="box1" obb-collider material="transparent: true; blending: multiply; color: #ffffff" geometry="" position="-0.93615 1.4762 3.12523" scale="10.51102 4.16059 0.07776" class="boundary"></a-box>
+            <a-box id="box2" material="side: double; transparent: true; blending: multiply; color: #ffffff" geometry="" position="4.38409 1.4762 2.21601" scale="0.81279 4.16059 6.19699" rotation="" class="boundary"></a-box>
+            <a-box id="box3" material="opacity: 1; side: double; transparent: true; blending: multiply; color: #ffffff" geometry="" position="5.41853 1.4762 -0.98175" scale="6.00254 4.16059 1.8247" rotation="0 90 0" class="boundary"></a-box>
+            <a-box id="box4" material="opacity: 1; side: double; transparent: true; blending: multiply; color: #ffffff" geometry="" position="8.19497 1.476 -1.21285" scale="2.94983 4.16059 3.90289" rotation="0 90 0" class="boundary"></a-box>
+            <a-box id="box5" material="opacity: 1; side: double; transparent: true; blending: multiply; color: #ffffff" geometry="" position="11.72324 1.476 -5.4514" scale="6.1563 4.16059 3.90289" rotation="0 90 0" class="boundary"></a-box>
+            <a-box id="box6" material="opacity: 1; side: double; transparent: true; blending: multiply; color: #ffffff" geometry="" position="5.39618 1.476 -8.47803" scale="0.90893 4.16059 10.06064" rotation="0 90 0" class="boundary"></a-box>
+            <a-box id="box7" material="opacity: 1; side: double; transparent: true; blending: multiply; color: #ffffff" geometry="" position="-0.65166 1.476 -5.89607" scale="6.61001 4.16059 2.62242" rotation="0 90 0" class="boundary"></a-box>
+            <a-box id="box8" material="opacity: 1; side: double; transparent: true; blending: multiply; color: #ffffff" geometry="" position="-4.2988 1.56285 -5.65069" scale="1.39348 4.16059 5.27787" rotation="0 90 0" class="boundary"></a-box>
+            <a-box id="box9" material="opacity: 1; side: double; transparent: true; blending: multiply; color: #ffffff" geometry="" position="-6.94987 1.56285 -0.70115" scale="10.01276 4.16059 1.98454" rotation="0 90 0" class="boundary"></a-box>
         </a-entity> -->
     </a-scene>
 </body>

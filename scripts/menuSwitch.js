@@ -10,6 +10,7 @@ AFRAME.registerComponent('menu-switch', {
         var wallMenu = document.getElementById('WallMenu');
         var floorMenu = document.getElementById('FloorMenu');
         var couchMenu = document.getElementById('CouchMenu'); 
+        var reviewMenu = document.getElementById('ReviewMenu');
         
         // Add click event listener to this element
         el.addEventListener('click', function () {
@@ -28,6 +29,8 @@ AFRAME.registerComponent('menu-switch', {
                     couchMenu.setAttribute('position', '0 0.3 0.01')
                     livingMenu.setAttribute('visible', true);
                     livingMenu.setAttribute('position', '-1 1.5 0.8')
+                    reviewMenu.setAttribute('visible', false);
+                    reviewMenu.setAttribute('position', '0 0.3 0.01')
                 }
 
             else if(data.targetMenu.id == 'WallMenu')
@@ -40,6 +43,8 @@ AFRAME.registerComponent('menu-switch', {
                     couchMenu.setAttribute('position', '0 0.3 0.01')
                     wallMenu.setAttribute('visible', true);
                     wallMenu.setAttribute('position', '-1 1.5 0.8')
+                    reviewMenu.setAttribute('visible', false);
+                    reviewMenu.setAttribute('position', '0 0.3 0.01')
                 }
 
             else if(data.targetMenu.id == 'FloorMenu')
@@ -52,6 +57,8 @@ AFRAME.registerComponent('menu-switch', {
                     couchMenu.setAttribute('position', '0 0.3 0.01')
                     floorMenu.setAttribute('visible', true);
                     floorMenu.setAttribute('position', '-1 1.5 0.8')
+                    reviewMenu.setAttribute('visible', false);
+                    reviewMenu.setAttribute('position', '0 0.3 0.01')
                 }
             else if(data.targetMenu.id == 'CouchMenu')
                 {
@@ -63,6 +70,22 @@ AFRAME.registerComponent('menu-switch', {
                     floorMenu.setAttribute('position', '0 0.3 0.01')
                     couchMenu.setAttribute('visible', true);
                     couchMenu.setAttribute('position', '-1 1.5 0.8')
+                    reviewMenu.setAttribute('visible', false);
+                    reviewMenu.setAttribute('position', '0 0.3 0.01')
+                    
+                }
+            else if(data.targetMenu.id == 'ReviewMenu')
+                {
+                    livingMenu.setAttribute('visible', false);
+                    livingMenu.setAttribute('position', '0 0.3 0.01')
+                    wallMenu.setAttribute('visible', false);
+                    wallMenu.setAttribute('position', '0 0.3 0.01')
+                    floorMenu.setAttribute('visible', false);
+                    floorMenu.setAttribute('position', '0 0.3 0.01')
+                    couchMenu.setAttribute('visible', false);
+                    couchMenu.setAttribute('position', '0 0.3 0.01')
+                    reviewMenu.setAttribute('visible', true);
+                    reviewMenu.setAttribute('position', '-1 1.5 0.8')
                     
                 }
         });
