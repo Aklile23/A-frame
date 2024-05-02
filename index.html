@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <title>Design Customization by VisionLab</title>
     <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-thumb-controls-component@1.1.0/dist/aframe-thumb-controls-component.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>  <!--for PDF-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.23/jspdf.plugin.autotable.min.js"></script>
     <script src="./scripts/color-toggle.js"></script>
     <script src="./scripts/menuSwitch.js"></script>
     <script src="./scripts//change-wall-color.js"></script>
@@ -15,20 +15,17 @@
     <script src="./scripts/couch-change.js"></script>
     <script src="./scripts/light-change.js"></script>
     <script src="./scripts/oculus-trigger-listener.js"></script>
-    <script src="./scripts/thumbstick-movement.js"></script>
     <script src="./scripts/menu-toggle.js"></script>
     <script src="./scripts/updateReviewWall.js"></script>
     <script src="./scripts/updateReviewFloor.js"></script>
     <script src="./scripts/generate-pdf.js"></script>
+    <script src="./scripts/oculus-thumbstick-controls.js"></script>
+    <script src="./scripts/oculus-thumbstick-movement.js"></script>
+ 
 
-    
 </head>
 <body>
     <a-scene cursor = 'rayOrigin: mouse' physics="gravity: 0" obb-collider="showColliders: false">
-
-        <a-entity id="player" obb-collider="collider: .collidable" position="0 1.5 0">
-            <!-- Player geometry or components -->
-          </a-entity>
 
         <a-assets>
                 <!--glb models/ not interactable-->
@@ -63,18 +60,19 @@
             
         </a-assets>
         <a-sky src="./textures/sky.jpg"></a-sky>
-        <a-entity  position="0 0 0" rotation="0 180 0">
-            <a-camera id="rig" position="1 1.3 1" look-controls wasd-controls menu-toggle>
-            <a-entity oculus-touch-controls="hand: left" laser-controls="hand: left" raycaster="objects: .clickable" thumb-controls="hand: left" ></a-entity>
-            <a-entity oculus-touch-controls="hand: right" laser-controls="hand: right" raycaster="objects: .clickable" thumb-controls="hand: right"></a-entity>
-        </a-camera>
+        <a-entity id="rig" position="0 0 0" rotation="0 180 0">
+            <a-camera position="1 1.3 1" look-controls wasd-controls menu-toggle></a-camera>
+            <a-entity id="leftController" oculus-touch-controls="hand: left" oculus-thumbstick-movement
+                        laser-controls="hand: left" raycaster="objects: .clickable"></a-entity>
+            <a-entity id="rightController" oculus-touch-controls="hand: right" oculus-thumbstick-controls
+                        laser-controls="hand: right" raycaster="objects: .clickable"></a-entity>
         </a-entity>
         
             <!-- Non-Interactive models-->
-        <a-entity gltf-model="#mat"></a-entity>
-        <a-entity gltf-model="#tv" ></a-entity>
+        <!-- <a-entity gltf-model="#mat"></a-entity>
+        <a-entity gltf-model="#tv" ></a-entity> -->
         <a-entity gltf-model="#curtain"></a-entity>
-        <a-entity gltf-model="#window"></a-entity>
+        <!-- <a-entity gltf-model="#window"></a-entity>
         <a-entity gltf-model="#chair"></a-entity>
         <a-entity gltf-model="#shelf"></a-entity>
         <a-entity gltf-model="#door"></a-entity>
@@ -86,7 +84,7 @@
         <a-entity gltf-model="#roof"></a-entity>
         <a-entity gltf-model="#washer"></a-entity>
         <a-entity gltf-model="#paint"></a-entity>
-        <a-entity gltf-model="#lamp"></a-entity>
+        <a-entity gltf-model="#lamp"></a-entity> -->
         
 
             <!--Interactive models-->
@@ -94,7 +92,7 @@
         <a-obj-model id="floor" src="#Floor" material="src: ./textures/floor/3.jpg; repeat: 1 2"></a-obj-model>
         <a-obj-model id="kitchen" src="#kitchenKabinet" material="src: ./textures/kitchen/6.jpg; repeat: 3 2"></a-obj-model>
 
-        <a-entity id="couch" gltf-model="#sofa"></a-entity>
+        <!-- <a-entity id="couch" gltf-model="#sofa"></a-entity>
         <a-entity id="couch2" visible="false">
             <a-entity gltf-model="#sofa2" position="-1.715 0 2.237" rotation="0 180 0"></a-entity>
             <a-entity gltf-model="#sofa2" position="-0.116 0 0.702" rotation="0 -90 0"></a-entity>
@@ -105,7 +103,7 @@
             <a-entity gltf-model="#sofa3" position="-1.715 0 2.237" rotation="0 180 0"></a-entity>
             <a-entity gltf-model="#sofa3" position="-0.116 0 0.702" rotation="0 -90 0"></a-entity>
             <a-entity gltf-model="#table3" position="-1.6 0 0.819" rotation="0 0 0"></a-entity>
-        </a-entity>
+        </a-entity> -->
 
         <a-obj-model id="spotLight" src="#Klamp" color="#c2c2c2" visible="true">
             <a-sphere position="-4.346 2.068 -5.338" scale="0.064 0.029 0.064" emissive="#ffffff" emissiveIntensity="10"></a-sphere>
