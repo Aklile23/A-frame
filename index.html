@@ -36,17 +36,18 @@
             <a-asset-item id="window" src="./3D_Models/window.glb"></a-asset-item>
             <a-asset-item id="chair" src="./3D_Models/chairs&plant.glb"></a-asset-item>
             <a-asset-item id="shelf" src="./3D_Models/Shelf.glb"></a-asset-item>
-            <a-asset-item id="door" src="./3D_Models/Door.glb"></a-asset-item>
+            <a-asset-item id="door" src="./3D_Models/door2.glb"></a-asset-item>
             <a-asset-item id="BDoor" src="./3D_Models/BedDoors.glb"></a-asset-item>
             <a-asset-item id="fridge" src="./3D_Models/fridge.glb"></a-asset-item>
             <a-asset-item id="stove" src="./3D_Models/stove.glb"></a-asset-item>
             <a-asset-item id="sink" src="./3D_Models/sink.glb"></a-asset-item>
             <a-asset-item id="handles" src="./3D_Models/handles.glb"></a-asset-item>
-            <a-asset-item id="roof" src="./3D_Models/roof.glb"></a-asset-item>
+            <a-asset-item id="roof" src="./3D_Models/roof.obj"></a-asset-item>
             <a-asset-item id="washer" src="./3D_Models/dishWasher.glb"></a-asset-item>
             <a-asset-item id="paint" src="./3D_Models/Paint.glb"></a-asset-item>
-            <a-asset-item id="lamp" src="./3D_Models/lamp.glb"></a-asset-item>
+            <a-asset-item id="lamps" src="./3D_Models/LivingLamps.obj"></a-asset-item>
             <a-asset-item id="Klamp" src="./3D_Models/KitchenLamp.obj"></a-asset-item>
+            <a-asset-item id="MainLamp" src="./3D_Models/main Lamp.obj"></a-asset-item>
 
                 <!--obj models/ interactable-->
             <a-asset-item id="walls" src="./3D_Models/walls.obj" static-body></a-asset-item>
@@ -75,20 +76,25 @@
         <a-entity gltf-model="#window"></a-entity>
         <a-entity gltf-model="#chair"></a-entity>
         <a-entity gltf-model="#shelf"></a-entity>
-        <a-entity gltf-model="#door"></a-entity>
+        <a-entity gltf-model="#door" position="5.539 -1.385 -8.176" scale="14.364 13.359 10"></a-entity>
         <a-entity gltf-model="#BDoor"></a-entity>
         <a-entity gltf-model="#fridge"></a-entity>
         <a-entity gltf-model="#stove"></a-entity>
         <a-entity gltf-model="#sink"></a-entity>
         <a-entity gltf-model="#handles"></a-entity>
-        <a-entity gltf-model="#roof"></a-entity>
         <a-entity gltf-model="#washer"></a-entity>
         <a-entity gltf-model="#paint"></a-entity>
-        <a-entity gltf-model="#lamp"></a-entity>
-        
+        <a-obj-model id="Roof" src="#roof" color="#b5b5b5"></a-obj-model>
+        <a-obj-model id="livingLamps" src="#lamps" material="color: #ffffff; metalness: 0.8" >
+            <a-sphere scale="0.18559 0.04933 0.18559" emissive="#ffffff" emissiveintensity="10" position="0.38593 3.22516 1.38004"></a-sphere>
+            <a-sphere scale="0.18559 0.04933 0.18559" emissive="#ffffff" emissiveintensity="10" position="-3.84691 3.22516 -3.00826"></a-sphere>
+            <a-sphere scale="0.18559 0.04933 0.18559" emissive="#ffffff" emissiveintensity="10" position="4.98211 3.22516 -5.99471"></a-sphere>
+        </a-obj-model>
+        <a-obj-model id="mainLamp" src="#MainLamp" material="color: #ffffff; metalness: 0.8" ></a-obj-model>
+        <a-obj-model id="mainLamp" src="#MainLamp" material="color: #ffffff; emissive: #ffffff" scale="0.98431 0.91891 0.98838" position="-0.05481 0.23047 0"></a-obj-model>
 
             <!--Interactive models-->
-        <a-obj-model id="wall" src="#walls" color="#cccccc"></a-obj-model>
+        <a-obj-model id="wall" src="#walls" color="#cccccc" roughness="1"></a-obj-model>
         <a-obj-model id="floor" src="#Floor" material="src: ./textures/floor/3.jpg; repeat: 1 2"></a-obj-model>
         <a-obj-model id="kitchen" src="#kitchenKabinet" material="src: ./textures/kitchen/6.jpg; repeat: 3 2"></a-obj-model>
 
@@ -105,7 +111,7 @@
             <a-entity gltf-model="#table3" position="-1.6 0 0.819" rotation="0 0 0"></a-entity>
         </a-entity>
 
-        <a-obj-model id="spotLight" src="#Klamp" color="#c2c2c2" visible="true">
+        <a-obj-model id="spotLight" src="#Klamp" material="color: #ffffff; metalness: 0.8" visible="true">
             <a-sphere position="-4.346 2.068 -5.338" scale="0.064 0.029 0.064" emissive="#ffffff" emissiveIntensity="10"></a-sphere>
             <a-sphere position="-5.074 2.068 -5.338" scale="0.064 0.029 0.064" emissive="#ffffff" emissiveIntensity="10"></a-sphere>
             <a-sphere position="-5.785 2.068 -5.338" scale="0.064 0.029 0.064" emissive="#ffffff" emissiveIntensity="10"></a-sphere>
@@ -118,24 +124,28 @@
             <a-cylinder color="#3c96b4" position="-6.502 2.047 -5.434" rotation="90 0 0" scale="0.030 0.775 0.030" emissive="#3c96b4"></a-cylinder>
             <a-cylinder color="#3c96b4" position="-5.122 2.047 -5.790" rotation="90 -90 0" scale="0.030 2.915 0.030" emissive="#3c96b4"></a-cylinder>
             <a-entity light="intensity: 4; castShadow: true; angle: 102.69; color: #3c96b4; type: point; decay: 0.82; distance: 2.94" position="-5.36963 1.55022 -5.24585" data-aframe-default-light="" aframe-injected="" visible="" rotation=""></a-entity>
+            <a-entity light="intensity: 0.4; castShadow: true; angle: 180; color: #ffffff; type: point" position="-3.38611 2.32789 0.47389" data-aframe-default-light="" aframe-injected="" visible="" rotation="5.361166089039113 -4.425526009590479 13.55904622177093"></a-entity>
         </a-entity>
         <a-entity id="RedNeon" visible="false">
             <a-cylinder color="#f04747" position="-3.676 2.047 -5.434" rotation="90 0 0" scale="0.030 0.775 0.030" emissive="#f04747"></a-cylinder>
             <a-cylinder color="#f04747" position="-6.502 2.047 -5.434" rotation="90 0 0" scale="0.030 0.775 0.030" emissive="#f04747"></a-cylinder>
             <a-cylinder color="#f04747" position="-5.122 2.047 -5.790" rotation="90 -90 0" scale="0.030 2.915 0.030" emissive="#f04747"></a-cylinder>
             <a-entity light="intensity: 2.21; castShadow: true; angle: 102.69; color: #f04747; type: point; decay: 0.82; distance: 1.81" position="-5.36963 1.55022 -5.24585" data-aframe-default-light="" aframe-injected="" visible="" rotation=""></a-entity>
+            <a-entity light="intensity: 0.4; castShadow: true; angle: 180; color: #ffffff; type: point" position="-3.38611 2.32789 0.47389" data-aframe-default-light="" aframe-injected="" visible="" rotation="5.361166089039113 -4.425526009590479 13.55904622177093"></a-entity>
         </a-entity>
         <a-entity id="YellowNeon" visible="false">
             <a-cylinder color="#e1ee2b" position="-3.676 2.047 -5.434" rotation="90 0 0" scale="0.030 0.775 0.030" emissive="#e1ee2b"></a-cylinder>
             <a-cylinder color="#e1ee2b" position="-6.502 2.047 -5.434" rotation="90 0 0" scale="0.030 0.775 0.030" emissive="#e1ee2b"></a-cylinder>
             <a-cylinder color="#e1ee2b" position="-5.122 2.047 -5.790" rotation="90 -90 0" scale="0.030 2.915 0.030" emissive="#e1ee2b"></a-cylinder>
             <a-entity light="intensity: 2.21; castShadow: true; angle: 102.69; color: #e1ee2b; type: point; decay: 0.82; distance: 1.51" position="-5.36963 1.55022 -5.24585" data-aframe-default-light="" aframe-injected="" visible="" rotation=""></a-entity>
+            <a-entity light="intensity: 0.4; castShadow: true; angle: 180; color: #ffffff; type: point" position="-3.38611 2.32789 0.47389" data-aframe-default-light="" aframe-injected="" visible="" rotation="5.361166089039113 -4.425526009590479 13.55904622177093"></a-entity>
         </a-entity>
         <a-entity id="GreenNeon" visible="false">
             <a-cylinder color="#04b97d" position="-3.676 2.047 -5.434" rotation="90 0 0" scale="0.030 0.775 0.030" emissive="#04b97d"></a-cylinder>
             <a-cylinder color="#04b97d" position="-6.502 2.047 -5.434" rotation="90 0 0" scale="0.030 0.775 0.030" emissive="#04b97d"></a-cylinder>
             <a-cylinder color="#04b97d" position="-5.122 2.047 -5.790" rotation="90 -90 0" scale="0.030 2.915 0.030" emissive="#04b97d"></a-cylinder>
             <a-entity light="intensity: 2.65; castShadow: true; angle: 102.69; color: #04b97d; type: point; decay: 0.82; distance: 1.6" position="-5.36963 1.55022 -5.24585" data-aframe-default-light="" aframe-injected="" visible="" rotation=""></a-entity>
+            <a-entity light="intensity: 0.4; castShadow: true; angle: 180; color: #ffffff; type: point" position="-3.38611 2.32789 0.47389" data-aframe-default-light="" aframe-injected="" visible="" rotation="5.361166089039113 -4.425526009590479 13.55904622177093"></a-entity>
         </a-entity>
 
             <!-- Menu Setup, Main Menu -->
